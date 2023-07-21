@@ -1,0 +1,713 @@
+include ../parts/head1
+meta(name='description', content='ZHAO Xudong resume page')
+meta(name='keywords', content='resume,ZHAO Xudong,timeline')
+title Resume - #{siteName}
+link(rel='stylesheet', href=cdn + '/apps/h5/css/timeline1.css?' + version)
+include ../parts/head2
+include ../parts/bg
+#wrapper
+
+  #content.container
+    .row
+
+      //left-panel
+      .left-panel.col-sm-4.col-md-4.col-lg-3.alignright
+
+        .pdtb.pdlr.pdtb
+          h1.h1
+            |赵旭东
+            small (1983~)
+          hr
+          p Web Developer
+          p.exp.btn-group.btn-group-sm
+            button.shapes-to-text.btn.btn-danger(type='button', title='change the background shapes!') random bg
+            button.change-shape.btn.btn-warning(type='button', title='change the background shapes!') change bg
+
+        .pdb.pdlr
+          a.block.pdb(href=host) html5beta.com
+          a.block.pdb(rel='external nofollow', href='//github.com/zxdong262') @github
+          a.block.pdb(rel='external nofollow', href='https://www.npmjs.com/~zxdong262') @npm
+          a.block.pdb(rel='external nofollow', href='https://www.linkedin.com/in/html5beta/') @linkedIn
+          a.block.pdb(rel='external nofollow', href='//stackoverflow.com/users/615576/zhao-xudong') @stackoverflow
+          a.block.pdb(rel='external nofollow', href='mailto:zxdong@gmail.com') zxdong@gmail.com
+          a.block.pdb(href='#') QQ:986839138
+
+          hr
+          #qr1.pdb
+            
+      //main
+      .main.col-sm-8.col-md-8.col-lg-9
+
+        #paper1.paper.animate
+        #paper2.paper.animate
+
+        .main-content
+
+          .pd
+            p.clearfix
+              a.fright.font12(href=host + '/page/timeline-en.html#about-me') English Version
+
+            ul.nav.nav-tabs.fix
+              li.mgl.nav-item(role='presentation')
+                a.nav-link(href='#about-me') 概述
+              li.nav-item(role='presentation')
+                a.nav-link(href='#open-sourced') 开源软件
+              li.nav-item(role='presentation')
+                a.nav-link(href='#timeline') 时间线
+
+          .tab-contents
+
+            //about me
+            .tab-content.hider(data-tab='about-me')
+              h2 关于我
+              hr
+              //blockquote
+                p 具有高度执行力，责任感和学习力。代码洁癖，自我驱动，不允许任何不好的产品从我的手里产生。
+                footer 我每天都这么做以至于不得不相信这是真的...
+
+              p
+                | 全栈工程师, 之前为 
+                a(href='//www.ringcentral.com', rel='external nofollow') 铃盛
+                |，
+                a(href='//www.sugoio.com', rel='external nofollow') 广东数果
+                |，
+                a(href='//baotianqi.cn', rel='external nofollow') 天气宝
+                |，
+                a(href='//qida.com', rel='external nofollow') 企大
+                |等企业(作为固定雇员)，
+                |,以及一些国内的创业团队(作为自由职业者)工作。
+              p 主要写网站程序, 开源软件/lib/SDK/framework/POC/Demo等, 包括服务器端和前端，Android/IOS app(phonegap, cordova), windows, Linux, mac(node-webkit, electron)和mac(xcode, electron)桌面程序，设计小型程序/插件/扩展的解决方案, UI等。代码洁癖，同时生产力极高。
+              p
+                | 我写了很多开源软件/lib/SDK/framework，如 
+                - var arr = resume.openSourced.arr
+                - var showNum = 10
+                - var restNum = arr.length - showNum
+                - for(var i = 0, len = showNum;i < len;i ++) {
+                  - var ops = arr[i]
+                  a(href=ops.homepage, title=ops.description) #{ops.name}(#{ops.stargazers_count || 0}⭐)
+                  |,
+                - }
+                a.more(href='#open-sourced') 以及更多...
+
+              //p.pdt 更多的描述（希望这些描述有助于对我有更进一步的了解）：
+              //.pdb
+                p &bull; <b>代码洁癖</b>：不只是代码格式，还有追求在可能的范围内最优解决方案
+                p &bull; <b>起得早</b>：在每一份工作中都是平均上班时间最早的人
+                p &bull; <b>高效而且投入</b>：在每一份工作中都是执行力最高（请注意这是一个主观描述）而且加班最多的人
+                p &bull; <b>责任心</b>：没有雇员的觉悟，一旦工作到我的手里，就是我的产品，目标是一定要做到最好。
+
+
+              h2 专业技能
+              hr
+              p &bull; 小型程序数据库, 接口, 构架和解决方案设计
+              p &bull; 网站和web app开发和测试 (<code>mongodb</code>, <code>nodejs</code>, <code>python</code>, <code>vue</code>, <code>react</code>, <code>angularjs</code>, <code>jest</code>, <code>mocha</code>, <code>nginx</code>, <code>mysql</code>, <code>AWS Lambda</code>, <code>AWS DynamoDB</code>)
+              p &bull; 服务器运维(ubuntu, centos...)
+
+
+              h2 工作经验
+              hr
+              p.title.bold 高级软件工程师.
+              p.em.font12.color-grey 厦门铃盛 / 2018.09 ~ 2022.07
+              p.pdb 开源SDK/Framework/Lib/web app/extension/bot/Mobile app/POC/demo编写测试以及文档, 以及相关技术文章撰写, 视频制作, 客户服务...
+
+              p.title.bold 软件工程师.
+              p.em.font12.color-grey 广东数果 / 2016.08 ~ 2018.06
+              p.pdb 服务器运维, 解决方案和构架设计, 数据库和接口设计, web/桌面 app 开发, nodejs, pgsql, html5, react...
+
+              p.title.bold 软件工程师.
+              p.em.font12.color-grey 天气宝 / 2015.06 ~ 2016.03
+              p.pdb 服务器运维, 解决方案和构架设计, 数据库和接口设计, web app 开发, nodejs, mongodb, html5, angularjs, nginx...
+
+              p.title.bold 软件工程师.
+              p.em.font12.color-grey long.tv / 2015.01 ~ 2015.06
+              p.pdb 解决方案和构架设计, 数据库和接口设计, web app 开发, nodejs, mongodb, html5, angularjs...
+
+              p.title.bold 前端工程师，前端主管.
+              p.em.font12.color-grey 企大qida.com / 2013.07 ~ 2014.10
+              p.pdb 前端和服务器端(nodejs)，构架和解决方案设计，桌面app开发等
+
+              p.title.bold 前端工程师，前端部门负责人.
+              p.em.font12.color-grey 朋道ponder.com.cn / 2012.04 ~ 2013.05 
+              p.pdb
+                | 前端代码和UI设计，Android 程序开发（基于phonegap）, 2012最佳执行力
+                sup.color-red 奖
+
+              p.title.bold 自由职业者.
+              p.em.font12.color-grey  2011.09 ~ 2012.04
+              p.pdb 为topcoder以及一些国内的创业团队工作, 前端开发（UI实现，2d游戏，单页面程序等等）
+
+              p.title.bold 网站管理员.
+              p.em.font12.color-grey  anlt-china.com / 2010.04 ~ 2011.09 
+              p.pdb 关于这个网站的一切：域名解析，备案，虚拟主机购买，wordpress部署，主题定制，写插件，内容录入以及SEO等等
+
+              h2 技术文章
+              hr
+              - var posts = resume.articles.arr
+              - for(var j = 0, len = posts.length;j < len;j ++) {
+                - var post = posts[j]
+                a.block.pdb(href=post.url)
+                  span(title=post.desc) &bull; #{post.title}
+              - }
+
+              a.block.pdb(href='https://medium.com/@drake.zhao') &bull; 更多...
+
+              h2 教育经历
+              hr
+              p USTC(中国科学技术大学)，统招本科
+              p 结业证书，生物科学.
+
+              p.pdtb
+              p.mgtb
+
+            //openSourced
+            .tab-content.hide(data-tab='open-sourced')
+              ul
+                - var arr = resume.openSourced.arr
+                - for(var i = 0, len = arr.length;i < len;i ++) {
+                  - var ops = arr[i]
+                  - var rel = /html5beta/.test(ops.homepage)?'':'external nofollow'
+                  - var type = ops.repository.type === 'git'?'github':ops.repository.type
+                  li.pdb.font14
+                    div
+                      a.bold(href=ops.homepage, rel=rel) #{ops.name}
+                      a.mg-sec(href=ops.repository.url) @#{type}
+                    .color-grey #{ops.description}
+                - }
+                li.pdb.font14
+                  span ...
+                  a.mg-sec(rel='external nofollow', href='//github.com/zxdong262') @github
+                  a.mg-sec(rel='external nofollow', href='https://www.npmjs.com/~zxdong262') @npm
+
+            //timeline
+            .tab-content.time-sections.hide(data-tab='timeline')
+
+              // timeline unit
+              .time-section
+                .times
+                  span.time.iblock 2018.09
+                  span.time.iblock 2022.07
+                .desc
+                  p 作为高级软件工程师，为厦门铃盛工作。主要的工作内容是开源SDK/Framework/Lib/web app/extension/bot/Mobile app/POC/demo/内部工具编写测试以及文档, 以及相关技术文章撰写, 视频制作, 客户服务等。
+                  p.tags
+                    code.mg-sec DynamoDB
+                    code.mg-sec react
+                    code.mg-sec typescript
+                    code.mg-sec js
+                    code.mg-sec python
+                    code.mg-sec Lambda
+
+                .projs
+                  ul
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/ringcentral-embeddable-mobile-framework') ringcentral-embeddable-mobile-framework
+
+                      p 移动App框架， 基于ringcentral-embeddable, ringcentral-engage-voice-embeddable 和 cordova
+                      p.tags
+                        code.mg-sec Android
+                        code.mg-sec Cordova
+                        code.mg-sec IOS
+                        code.mg-sec js
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/ringcentral-chatbot-python') ringcentral-chatbot-python
+
+                      p 开源Bot框架，用于创建机器人扩展（RingCentralApp）
+                      p.tags
+                        code.mg-sec Chatbot
+                        code.mg-sec Python
+                        code.mg-sec Open Source Frameworks
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/ringcentral-notification-app-developer-tool') ringcentral-notification-app-developer-tool
+
+                      p 模拟工具，用于开发RingCentral App的通知类小程序
+                      p.tags
+                        code.mg-sec Node.js
+                        code.mg-sec React
+                        code.mg-sec HTML5
+
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/github-add-in') github-add-in
+
+                      p RingCentral App小工具， 用于连接github账户，接收推送以及操作github事务，发布于App gallery: https://www.ringcentral.com/apps/
+                      p.tags
+                        code.mg-sec Node.js
+                        code.mg-sec React
+                        code.mg-sec HTML5
+                        code.mg-sec AWS Lambda
+                        code.mg-sec DynamoDB
+                        code.mg-sec Serverless
+
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/auto-reply-bot') auto-reply-bot
+
+                      p 用于RingCentral App 的自动回复机器人，基于预设关键词.
+                      p 发布于 RingCentral App gallery: https://www.ringcentral.com/apps/autoreply-bot
+                      p.tags
+                        code.mg-sec Node.js
+                        code.mg-sec React
+                        code.mg-sec HTML5
+                        code.mg-sec AWS Lambda
+                        code.mg-sec DynamoDB
+                        code.mg-sec Serverless
+
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/engage-digital-js') engage-digital-js
+
+                      p JavaScript wrapper for RingCentral Engage API. (TypeScript/javascript/nodejs/CI/Jest).
+                      p.tags
+                        code.mg-sec Node.js
+                        code.mg-sec Typescript
+                        code.mg-sec Jest
+
+
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/lottery-bot') lottery-bot
+
+                      p 抽奖机器人. (TypeScript/javascript/nodejs/CI/Jest).
+                      p A Lottery picking bot for RingCentral app, just randomly pick some team members as lottery winner! (nodejs/react/Lambda/Dynamodb)
+                      p Published in RingCentral App gallery
+                      p.tags
+                        code.mg-sec Node.js
+                        code.mg-sec React
+                        code.mg-sec HTML5
+                        code.mg-sec AWS Lambda
+                        code.mg-sec DynamoDB
+                        code.mg-sec Serverless
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/engage-voice-js') engage-voice-js
+
+                      p RingCentral Engage Voice Client SDK for JavaScript. (CI/Typescript/nodejs/javascript/jest).
+                      p.tags
+                        code.mg-sec Node.js
+                        code.mg-sec Typescript
+                        code.mg-sec Jest
+                        code.mg-sec CI/CD
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/notification-app-js') notification-app-js
+
+                      p 工具框架: Js framework to create RingCentral notification messaging app. (nodejs/AWS Lambda/DynamoDB/serverless).
+                      p.tags
+                        code.mg-sec Node.js
+                        code.mg-sec React
+                        code.mg-sec HTML5
+                        code.mg-sec AWS Lambda
+                        code.mg-sec DynamoDB
+                        code.mg-sec Serverless
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/hubspot-embeddable-ringcentral-phone') hubspot-embeddable-ringcentral-phone
+
+                      p 谷歌浏览器插件，连接HubSpot CRM和RingCentral账户，同步通话短信记录等数据。Add RingCentral Embeddable Voice widgets to HubSpot contacts list and call contact page with Chrome extension.
+                      p As a community project, used by many user, even get a company prize for this project
+                      p.tags
+                        code.mg-sec Node.js
+                        code.mg-sec React
+                        code.mg-sec HTML5
+                        code.mg-sec AWS Lambda
+                        code.mg-sec DynamoDB
+                        code.mg-sec Chrome extension
+
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/ringcentral-embeddable-extension-factory') ringcentral-embeddable-extension-factory
+
+                      p 命令行工具, 创建RingCentral Embeddable谷歌插件脚手架: Cli tool to create a RingCentral Embeddable Chrome/Firefox extension for CRM sites.
+                      p.tags
+                        code.mg-sec Node.js
+                        code.mg-sec CLI
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/engage-voice-python') engage-voice-python
+
+                      p RingCentral Engage Voice Python API SDK.
+                      p.tags
+                        code.mg-sec Python
+                        code.mg-sec SDK
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/ringcentral-notification-app-helper') ringcentral-notification-app-helper
+
+                      p 工具类组件，用于创建通知类小工具 A module to help with communication with with RingCentral app in RingCentral notification app with UI.(TypeScript, javascript,SDK).
+                      p.tags
+                        code.mg-sec Node.js
+                        code.mg-sec Typescript
+                        code.mg-sec Jest
+                        code.mg-sec CI/CD
+
+
+              // timeline unit
+              .time-section
+                .times
+                  span.time.iblock 2016.08
+                  span.time.iblock 2018.06
+                .desc
+                  p 作为高级前端工程师，为广东数果工作。主要的工作内容是web app和桌面app开发，数据库，解决方案和构架设计。
+                  p.tags
+                    code.mg-sec postgres
+                    code.mg-sec react
+                    code.mg-sec webpack
+                    code.mg-sec typescript
+                    code.mg-sec electron
+                    code.mg-sec koa
+                    code.mg-sec vuejs
+
+                .projs
+                  ul
+                    li 数果大数据分析工具（多企业多用户）
+                    li 文件服务系统（类似七牛的模式）
+                    li 大屏展示系统
+                    li 消费头条
+
+              // /timeline unit
+
+              // timeline unit
+              .time-section
+                .times
+                  span.time.iblock 2015.06
+                  span.time.iblock 2016.03
+                .desc
+                  p 作为软件工程师，为天气宝工作。主要的工作内容是webapp开发，数据库，解决方案和构架设计，服务器运维等(在最初的几个月里只有我一个程序员)。
+                  p.tags
+                    code.mg-sec nodejs
+                    code.mg-sec nginx
+                    code.mg-sec mongodb
+                    code.mg-sec angularjs
+                    code.mg-sec mocha
+                    code.mg-sec karma
+                    code.mg-sec redis
+                    code.mg-sec koa
+                    code.mg-sec stylus
+                    code.mg-sec jade
+                    code.mg-sec gulp
+                    code.mg-sec pm2
+                    code.mg-sec css
+                    code.mg-sec javascript
+                    code.mg-sec jQuery
+
+                .projs
+                  ul
+                    li 天气历史数据站
+                    li 有赞订单助手, 微信红包, 微信分享扩散...
+                    li 天气数据接口
+                    li 商城
+                    li 天气数据抓取机器人
+                    li 订单管理系统
+                    li ...and more
+
+
+
+              // /timeline unit
+
+
+              // timeline unit
+              .time-section
+                .times
+                  span.time.iblock 2015.01
+                  span.time.iblock 2015.06
+                .desc
+                  p 作为软件工程师，为龙视传媒工作。主要的工作内容是webapp开发，数据库，解决方案和构架设计等。
+                  p
+                    |在独立开发的<code>18</code>个项目中提交了<code>291585</code>行代码
+                  p.tags
+                    code.mg-sec nodejs
+                    code.mg-sec mongodb
+                    code.mg-sec angularjs
+                    code.mg-sec mocha
+                    code.mg-sec karma
+                    code.mg-sec redis
+                    code.mg-sec koa
+                    code.mg-sec stylus
+                    code.mg-sec jade
+                    code.mg-sec gulp
+                    code.mg-sec pm2
+                    code.mg-sec css
+                    code.mg-sec javascript
+                    code.mg-sec jQuery
+
+                .projs
+                  ul
+                    li auth.long.tv (龙视授权中心，数据库，接口，构架，开发)
+                    li xlm.long.tv（二维码和微站系统，全部的构架，数据库，接口设计，开发）
+                    li adx.long.tv (广告交易平台，全部的构架，数据库，接口设计，开发)
+                    li
+                      a(href='//www.long.tv', rel='external nofollow') long.tv 
+                      |  (龙视官方网站，构架，开发和UI重构)
+                    li cms.long.tv (龙视内容管理，数据库，接口，构架，开发)
+
+
+
+              // /timeline unit
+
+              // timeline unit
+              .time-section
+                .times
+                  span.time.iblock 2013.07
+                  span.time.iblock 2014.10
+                .desc
+                  p 作为前端开发工程师， 前端构架师， 前端主管为企大（qida.com）工作，主要工作是前端重构，构架设计和编码。
+                  p.tags
+                    code.mg-sec nodejs
+                    code.mg-sec node-webkit
+                    code.mg-sec cas
+                    code.mg-sec express
+                    code.mg-sec memcache
+                    code.mg-sec seajs
+                    code.mg-sec underscore
+                    code.mg-sec stylus
+                    code.mg-sec jade
+                    code.mg-sec grunt
+                    code.mg-sec pm2
+                    code.mg-sec css
+                    code.mg-sec javascript
+                    code.mg-sec jQuery
+                .projs
+                  p clm.qida.com, www.qida.com, mingshi.qida.com, mall.qida.com, news.qida.com, admin.qida.com, 课程打包工具（基于node-webkit）, 培训圈网页版，微信服务管理程序，新闻抓取工具...等项目
+                  p 前端和服务器端（nodejs）构架, 编码, 核心组件和功能实现
+
+
+              // /timeline unit
+              // timeline unit
+              .time-section
+                .times
+                  span.time.iblock 2012.04
+                  span.time.iblock
+                    span.lang.en.hide 2013.04
+                    span.lang.cn 2013.04
+                .desc
+                  p
+                    | 长春朋道信息技术有限公司，前端工程师，互联网部门负责人，2012年度优秀员工（最佳执行力奖）
+                    sup.color-red AWARD
+                  p.tags
+                    code.mg-sec android
+                    code.mg-sec nodejs
+                    code.mg-sec express
+                    code.mg-sec phonegap
+                    code.mg-sec html5
+                    code.mg-sec mui
+                    code.mg-sec css
+                    code.mg-sec jsp
+                    code.mg-sec javascript
+                    code.mg-sec jQuery
+                    code.mg-sec mobile
+                    code.mg-sec ajax
+                    code.mg-sec google map api
+                    code.mg-sec zepto
+
+                .projs
+                  ul
+                    li
+                      p 掌上税局（Android app, based on phonegap）
+                      p 主要的app代码和构架
+                    li
+                      p
+                        a(href='//www.spds.com.cn', rel='external nofollow', title='四平市地方税务局纳税服务云平台') 四平市地方税务局纳税服务云平台
+                        | (所有的前端设计和代码)。
+
+                    li
+                      p
+                        a(href='//www.jldswssb.gov.cn', rel='external nofollow', title='吉林省地方税务局网上申报') 吉林省地方税务局网上申报
+                      p 登录页和引导页所有的前端设计和代码, 阿里云服务器购买和部署，基于
+                        strong nodejs
+                        | 的web服务部署。
+                    li 吉林省地方税务局信息中心网站(所有的前端设计和代码)
+                    li 四平市地方税务局发票抽奖系统UI(所有的前端设计和代码)
+
+              // /timeline unit
+              // timeline unit
+              .time-section
+                .times
+                  span.time.iblock 2011.09
+                  span.time.iblock 2012.03
+                .desc
+                  p
+                    span.label.label-primary.mg-sec 开始作为成手工作
+                    |自由职业，主要为topcoder.com,以及一些国内的团队工作。
+                  p.tags
+                    code.mg-sec html
+                    code.mg-sec html5
+                    code.mg-sec css
+                    code.mg-sec php
+                    code.mg-sec extjs
+                    code.mg-sec YUI
+                    code.mg-sec box2d
+                    code.mg-sec mobile
+                    code.mg-sec wordpress
+                    code.mg-sec javascript
+                    code.mg-sec jQuery
+                    code.mg-sec ajax
+                    code.mg-sec ie6+
+                    code.mg-sec canvas
+                    code.mg-sec local storage
+                    code.mg-sec html5 games
+                    code.mg-sec html5 animation
+                .projs
+              // /timeline unit
+              // timeline unit
+              .time-section
+                .times
+                  span.time.iblock 2010.04
+                  span.time.iblock 2011.08
+                .desc
+                  p
+                    span.label.label-primary.mg-sec 职业生涯的入门阶段
+                    a(href='//www.anlt-china.com', rel='external nofollow', title='查看下 我的第一个完整作品') 吉林省艾那涞特仪器设备有限公司
+                    | ，网站管理员和开发者，
+                    br
+                    | 包括域名申请，备案，解析，虚拟主机购买部署，后台wordpress部署，订制主题，插件，美工，所有内容录入，SEO，仍在很好的运行，在我离职后还没有任何更改。
+                    | 另外也处理集团电话设置和布线，网络布线，操作系统安装维护，组网，打印机维护之类的事情。
+                  p.tags
+                    code.mg-sec html
+                    code.mg-sec css
+                    code.mg-sec php
+                    code.mg-sec wordpress
+                    code.mg-sec javascript
+                    code.mg-sec jQuery
+                    code.mg-sec ajax
+                    code.mg-sec ie6+
+                .projs
+              // /timeline unit
+
+              // timeline unit
+              .time-section.compact
+                .times
+                  span.time.iblock 2009
+                  span.time.iblock 2010
+                .desc
+                  p 一些短期工作，包括保安，建筑工人，收银员，群众演员，教务等。
+                .projs
+              // /timeline unit
+
+              // timeline unit
+              .time-section.compact
+                .times
+                  span.time.iblock 2007
+                  span.time.iblock 2009
+                .desc
+                  p
+                    a(href='#', title='不用点了') 吉林申邦科技贸易有限公司
+                    | ，实验师，细胞培养，动物实验，文献翻译，相关数据统计处理，博士论文撰写
+                .projs
+                  ul
+                    li.project-experience
+                      h3 亚甲蓝和碘复合液对坐骨神经痛的抑制作用
+                      p
+                        strong 责任描述：
+                        br
+                        | 独立完成项目预算，规划，实施全过程。包括成本核算，动物实验，实验记录，实验结果等。
+                      p
+                        strong 项目简介：
+                        br
+                        | 结扎坐骨神经后立刻使用亚甲蓝注射液和碘复合液，观察不同时间点坐骨神经的病理情况。
+                    li.project-experience
+                      h3 骨髓间充质干细胞对肝损伤的治疗作用
+                      p
+                        strong 责任描述：
+                        br
+                        | 组织实施动物实验，病理，免疫组化以及激光共聚焦检测，独立完成数据处理，和部分论文撰写（包括全部英文部分）。
+                      p
+                        strong 项目简介：
+                        br
+                        | 使用四氯化碳溶液灌胃制作小鼠急性肝损伤模型。在不同时间点尾静脉注射小鼠骨髓间充质干细胞，观察其治疗作用和机制。
+                    li.project-experience
+                      h3 小鼠骨髓间充质干细胞诱导异基因肝移植模型大鼠免疫耐受的实验研究
+                      p
+                        strong 责任描述：
+                        br
+                        | 参与动物实验，独立完成数据统计处理，参与相关论文撰写（英文部分及实验结果）
+                      p
+                        strong 项目简介：
+                        br
+                        | 体外分离纯化及培养小鼠MSCs；将小鼠肝组织块埋入大鼠肝脏切口制备异基因肝移植大鼠模型；经尾静脉移植DAPI标记的小鼠MSCs，通过激光共聚焦显微镜分别在24h、5d及10d观察MSCs在肝脏移植区域的迁徙及定居；采用HE染色，免疫组化、激光共聚焦等方法观察异基因肝组织移植在受体大鼠体内的存活情况。观察小鼠骨髓间充质干细胞(MSCs)移植后在异基因肝移植模型大鼠移植区域的迁徙、定居及异基因移植肝组织的存活情况，以探讨异基因MSCs诱导移植免疫耐受的可能性。
+                    li.project-experience
+                      h3 骨髓间充质干细胞对脊髓损伤的治疗作用
+                      p
+                        strong 责任描述：
+                        br
+                        | 组织实施动物实验，病理，免疫组化以及激光共聚焦检测，独立完成数据处理，和部分论文撰写（包括全部英文部分）。
+                      p
+                        strong 项目简介：
+                        br
+                        | 脊髓损伤（spinal cord injury, SCI）是外科常见的创伤，其治疗是现代医学界尚未解决的重大课题之一。虽然治疗方法很多，但尚无明显有效的治疗手段。因此，本研究在应用自制的脊髓损伤模型打击装置----打击架制备大鼠脊髓损伤模型基础上，应用骨髓间充质干细胞（bone mesenchymal stem cells, MSCs）对其进行治疗，观察对脊髓损伤的保护和修复作用，并通过其对神经元细胞诱导凋亡的影响而初步探讨其作用机制。
+                    li.project-experience
+                      h3 骨髓间充质干细胞治疗大鼠胰腺损伤的研究
+                      p
+                        strong 责任描述：
+                        br
+                        | 组织实施动物实验，病理，免疫组化以及激光共聚焦检测，独立完成数据处理，和部分论文撰写（包括全部英文部分）。
+                      p
+                        strong 项目简介：
+                        br
+                        | 结扎大鼠胰腺造成胰腺坏死，再尾静脉注射大鼠骨髓间充质干细胞，通过病理，免疫组化以及激光共聚焦检测等方法观察检测治疗效果，研究其治疗机理。
+                    li.project-experience
+                      h3 骨髓间充质干细胞对豚鼠光老化的治疗作用
+                      p
+                        strong 责任描述：
+                        br
+                        | 项目组织，动物实验，病理，免疫组化，激光共聚焦等检测以及数据处理，相关论文撰写。其中独立完成全部动物实验部分，实验数据处理以及大部分论文撰写。
+                      p
+                        strong 项目简介：
+                        br
+                        | 本研究通过UVA、UVB两个波长的紫外光每天照射豚鼠2小时，连续照射60天，建立豚鼠皮肤光老化模型。分别于紫外线照射两周后及照射60天给予骨髓间充质干细胞治疗，每周一次，连续四次，通过组织病理HE染色、masson染色以及天狼星染色技术观察MSCs是否可以延缓光老化的发生及MSCs对光老化的治疗作用。同时，通过DAPI荧光标记及激光共聚焦显微镜观察MSCs在皮肤光老化组织中的迁徙及定居，并通过免疫组化、天狼星染色及Elisa方法观察I型胶原蛋白的表达，I，III型胶原形态及光老化皮肤组织中IL-1、IL-6、TNF的含量变化，初步探讨MSCs对皮肤光老化治疗作用的可能机制。
+
+              // /timeline unit
+
+              // timeline unit
+              .time-section.compact
+                .times
+                  span.time.iblock 2006
+                  span.time.iblock 2007
+                .desc
+                  p 试图补考，失败，结业。
+                .projs
+              // /timeline unit
+
+              // timeline unit
+              .time-section
+                .times
+                  span.time.iblock 2002
+                  span.time.iblock 2006
+                .desc
+                  p
+                    | 在 
+                    a(href='//www.ustc.edu.cn', rel='external nofollow', title='中国科学技术大学') 中国科学技术大学
+                    | 生命科学学院学习
+                .projs
+              // /timeline unit
+
+              // timeline unit
+              .time-section.compact
+                .times
+                  span.time.iblock 1983.02.17
+                  span.time.iblock 2002
+                .desc
+                  p 出生到高中毕业，略。
+                .projs
+
+
+            include ../parts/disqus
+            include ../parts/footer-html1
+
+include ../parts/footer-js-noad
+script(src=cdn + '/apps/h5/js/min/timeline1.js?' + version)
+include ../parts/footer-disqus
+include ../parts/footer-end

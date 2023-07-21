@@ -1,0 +1,58 @@
+{
+  "name": "html5beta.com",
+  "version": "0.0.1",
+  "private": true,
+  "description": "html5beta.com",
+  "main": "index.js",
+  "scripts": {
+    "start": "vercel dev",
+    "b": "node bin/build.pug.js",
+    "build": "echo \"ok\"",
+    "fix": "standard --fix",
+    "lint": "standard",
+    "pub": "vercel --prod"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.2",
+    "@types/node": "^20.3.1",
+    "@vercel/node": "^2.15.2",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.44.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-config-standard-with-typescript": "^36.0.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "pug": "^3.0.2",
+    "standard": "^17.1.0",
+    "typescript": "^5.1.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zxdong262/html5beta.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zxdong262/html5beta.com/issues"
+  },
+  "homepage": "https://github.com/zxdong262/html5beta.com#readme",
+  "standard": {
+    "ignore": [
+      "/src",
+      "/temp",
+      "/public"
+    ],
+    "globals": [
+      "log",
+      "MouseEvent",
+      "WebSocket",
+      "FileReader",
+      "CustomEvent",
+      "onmessage",
+      "self"
+    ]
+  }
+}

@@ -1,0 +1,644 @@
+include ../parts/head1
+meta(name='description', content='ZHAO Xudong resume page')
+meta(name='keywords', content='resume,ZHAO Xudong,timeline')
+title Resume - #{siteName}
+link(rel='stylesheet', href=cdn + '/apps/h5/css/timeline1.css?' + version)
+include ../parts/head2
+include ../parts/bg
+#wrapper
+
+  #content.container
+    .row
+
+      //left-panel
+      .left-panel.col-sm-4.col-md-4.col-lg-3.alignright
+
+        .pdtb.pdlr
+          h1.h1
+            |赵旭东
+            small (1983~)
+          hr
+          p Web Developer
+          p.exp.btn-group.btn-group-sm
+            button.shapes-to-text.btn.btn-danger(type='button', title='change the background shapes!') random bg
+            button.change-shape.btn.btn-warning(type='button', title='change the background shapes!') change bg!
+
+        .pdb.pdlr
+          a.block.pdb(href=host) html5beta.com
+          a.block.pdb(rel='external nofollow', href='//github.com/zxdong262') @github
+          a.block.pdb(rel='external nofollow', href='https://www.linkedin.com/in/html5beta/') @linkedIn
+          a.block.pdb(rel='external nofollow', href='https://www.npmjs.com/~zxdong262') @npm
+          a.block.pdb(rel='external nofollow', href='//stackoverflow.com/users/615576/zhao-xudong') @stackoverflow
+          a.block.pdb(rel='external nofollow', href='mailto:zxdong@gmail.com') zxdong@gmail.com
+          a.block.pdb(href='#') QQ:986839138
+
+          hr
+          #qr1.pdb
+            
+      //main
+      .main.col-sm-8.col-md-8.col-lg-9
+
+        #paper1.paper.animate
+        #paper2.paper.animate
+
+        .main-content
+
+          .pd
+            p.clearfix
+              a.fright.font12(href=host + '/page/timeline.html#about-me') 中文版
+
+            ul.nav.nav-tabs.fix
+              li.mgl.nav-item(role='presentation')
+                a.nav-link(href='#about-me') Resume
+              li.nav-item(role='presentation')
+                a.nav-link(href='#open-sourced') Open-sourced
+              li.nav-item(role='presentation')
+                a.nav-link(href='#timeline') timeline
+
+              
+
+          .tab-contents
+
+            //about me
+            .tab-content.hider(data-tab='about-me')
+              h2 About me
+              hr
+
+              p
+                | ZHAO Xudong(1983.02~), previously I worked for 
+                a(href='//www.ringcentral.com', rel='external nofollow') RingCentral
+                |, 
+                a(href='//www.sugoio.com', rel='external nofollow') SugoIO
+                |, 
+                a(href='//baotianqi.cn', rel='external nofollow') baotianqi.cn 
+                |, 
+                a(href='//qida.com', rel='external nofollow') qida.com
+                | (full-time), and some entrepreneur teams(freelance).
+              p I focus on web dev(server and front end), open sourced lib/SDK/Framework/POC/Demo, Android/IOS app(phonegap, cordova), and desktop app(xcode, electron).
+
+              p
+                | I wrote many open-sourced app&lib, such as 
+                - var arr = resume.openSourced.arr
+                - var showNum = 10
+                - var restNum = arr.length - showNum
+                - for(var i = 0, len = showNum;i < len;i ++) {
+                  - var ops = arr[i]
+                  a(href=ops.homepage, title=ops.description) #{ops.name}(#{ops.stargazers_count || 0}⭐)
+                  |,
+                - }
+                a.more(href='#open-sourced') and more...
+
+
+              h2 Professional technique
+              hr
+              p &bull; database, api, architecture and solution design for apps.
+              p &bull; website and web app development and test.(<code>mongodb</code>, <code>postgres</code>, <code>nodejs</code>, <code>python</code>, <code>vue</code>, <code>react</code>, <code>angularjs</code>, <code>jest</code>, <code>mocha</code>, <code>AWS Lambda</code>, <code>nginx</code>, <code>mysql</code>).
+              p &bull; server maintenance(ubuntu, cent os...).
+
+
+              h2 Work experience
+              hr
+              p.title.bold Sr. software engineer(SDK team).
+              p.em.font12.color-grey RingCentral / 2018.09 ~ 2022.07
+              p.pdb Open sourced SDK/Framework/lib/web app/extension/bot/mobile app/POC/demo, related document/video/tech blog, customer service..., and many internal tools.
+
+              p.title.bold Full-stack Engineer
+              p.em.font12.color-grey sugo.io / 2016.08 ~ 2018.06
+              p.pdb database, api, architecture and solution design, website and web/desktop app development(nodejs, koa, pgsql, html5, react, electron).
+
+              p.title.bold Full-stack Engineer
+              p.em.font12.color-grey baotianqi.cn / 2015.06 ~ 2016.03
+              p.pdb database, api, architecture and solution design, website and web app development(nodejs, koa,  mongodb, html5, angularjs, nginx).
+
+              p.title.bold Full-stack Engineer
+              p.em.font12.color-grey long.tv / 2015.01 ~ 2015.06
+              p.pdb database, api, architecture and solution design, website and web app development(nodejs, koa,  mongodb, html5, angularjs).
+
+              p.title.bold Leading Front-end Engineer.
+              p.em.font12.color-grey qida.com / 2013.07 ~ 2014.10
+              p.pdb Front-end and server-end (nodejs) web development, architecture and solution design, desktop app development(node-webkit).
+
+              p.title.bold Leading Front-end Engineer.
+              p.em.font12.color-grey ponder.com.cn / 2012.04 ~ 2013.05 
+              p.pdb
+                | Front-end and server-end (nodejs) web development, architecture and solution design, UI design, Android app development(phonegap), The Best Executive Ability 2012
+                sup.color-red Reward
+
+              p.title.bold Freelancer
+              p.em.font12.color-grey  2011.09 ~ 2012.04
+              p.pdb Front-end dev, 2d web game, single page app, work for topcoder and some entrepreneur teams.
+
+              p.title.bold Site Admin.
+              p.em.font12.color-grey  anlt-china.com / 2010.04 ~ 2011.09 
+              p.pdb Everything about www.anlt-china.com:the domain, virtual host, deploying wordpress, theme and plugin dev, content management, SEO...
+
+              h2 Articles
+              hr
+              - var posts = resume.articles.arr
+              - for(var j = 0, len = posts.length;j < len;j ++) {
+                - var post = posts[j]
+                a.block.pdb(href=post.url)
+                  span(title=post.desc) &bull; #{post.title}
+              - }
+
+              a.block.pdb(href='https://medium.com/@drake.zhao') &bull; more...
+
+              h2 Eduaction
+              hr
+              p USTC(University of Science and Technology of China)
+              p Certificate of Completion, Bio Science
+
+              p.pdtb
+              p.mgtb
+
+            //openSourced
+            .tab-content.hide(data-tab='open-sourced')
+              ul
+                - var arr = resume.openSourced.arr
+                - for(var i = 0, len = arr.length;i < len;i ++) {
+                  - var ops = arr[i]
+                  - var rel = /html5beta/.test(ops.homepage)?'':'external nofollow'
+                  - var type = ops.repository.type === 'git'?'github':ops.repository.type
+                  li.pdb.font14
+                    div
+                      a.bold(href=ops.homepage, rel=rel) #{ops.name}
+                      a.mg-sec(href=ops.repository.url) @#{type}
+                    .color-grey #{ops.description}
+                - }
+                li.pdb.font14
+                  span ... 
+                  a.mg-sec(rel='external nofollow', href='//github.com/zxdong262') @github
+                  a.mg-sec(rel='external nofollow', href='https://www.npmjs.com/~zxdong262') @npm
+
+            //timeline
+            .tab-content.time-sections.hide(data-tab='timeline')
+
+              // timeline unit
+              .time-section
+                .times
+                  span.time.iblock 2018.09
+                  span.time.iblock 2022.07
+                .desc
+                  p As Sr. software engineer(SDK team), worked for RingCentral, wrote Open sourced SDK/Framework/lib/web app/extension/bot/mobile app/POC/demo/internal tools, related document/video/tech blog, also created videos related, provide customer service.
+                  p.tags
+                    code.mg-sec DynamoDB
+                    code.mg-sec react
+                    code.mg-sec typescript
+                    code.mg-sec js
+                    code.mg-sec python
+                    code.mg-sec Lambda
+
+                .projs
+                  ul
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/ringcentral-embeddable-mobile-framework') ringcentral-embeddable-mobile-framework
+
+                      p Experimental RingCentral embeddable mobile framework to create customized Android/IOS apps based on ringcentral-embeddable, ringcentral-engage-voice-embeddable and cordova
+                      p Created Experimental RingCentral embeddable mobile framework to create customized Android/IOS apps based on ringcentral-embeddable, ringcentral-engage-voice-embeddable and cordova
+                      p.tags
+                        code.mg-sec Android
+                        code.mg-sec Cordova
+                        code.mg-sec IOS
+                        code.mg-sec js
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/ringcentral-chatbot-python') ringcentral-chatbot-python
+
+                      p RingCentral Chatbot Framework dramatically simplifies the process of building a bot to work with Glip, RingCentral's group chat system. It is intended to do most of the heavy lifting for developers, allowing them to focus primarily on the logic and user experience of their bot.
+                      p.tags
+                        code.mg-sec Chatbot
+                        code.mg-sec Python
+                        code.mg-sec Open Source Frameworks
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/ringcentral-notification-app-developer-tool') ringcentral-notification-app-developer-tool
+
+                      p A tool to help developer to test notification integration for RingCentral app
+                      p.tags
+                        code.mg-sec Node.js
+                        code.mg-sec React
+                        code.mg-sec HTML5
+
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/github-add-in') github-add-in
+
+                      p RingCentral add-in that post github messages to a RingCentral team you selected. Publised in RingCentral app gallery: https://www.ringcentral.com/apps/
+                      p.tags
+                        code.mg-sec Node.js
+                        code.mg-sec React
+                        code.mg-sec HTML5
+                        code.mg-sec AWS Lambda
+                        code.mg-sec DynamoDB
+                        code.mg-sec Serverless
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/github-add-in') auto-reply-bot
+
+                      p A Auto Reply bot for RingCentral app, when some one talk with you with some keywords you pre-defined with Auto Reply bot, your account will auto reply with your pre-defined reply.
+                      p Save time by having Team Messaging automatically respond to messages for you. Team Messaging Auto-Responder will listen to messages posted for you and then automatically reply when keywords you configure are encountered.
+                      p Published in RingCentral App gallery: https://www.ringcentral.com/apps/autoreply-bot
+                      p.tags
+                        code.mg-sec Node.js
+                        code.mg-sec React
+                        code.mg-sec HTML5
+                        code.mg-sec AWS Lambda
+                        code.mg-sec DynamoDB
+                        code.mg-sec Serverless
+
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/engage-digital-js') engage-digital-js
+
+                      p JavaScript wrapper for RingCentral Engage API. (TypeScript/javascript/nodejs/CI/Jest).
+                      p.tags
+                        code.mg-sec Node.js
+                        code.mg-sec Typescript
+                        code.mg-sec Jest
+
+
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/lottery-bot') lottery-bot
+
+                      p JavaScript wrapper for RingCentral Engage API. (TypeScript/javascript/nodejs/CI/Jest).
+                      p A Lottery picking bot for RingCentral app, just randomly pick some team members as lottery winner! (nodejs/react/Lambda/Dynamodb)
+                      p Published in RingCentral App gallery
+                      p.tags
+                        code.mg-sec Node.js
+                        code.mg-sec React
+                        code.mg-sec HTML5
+                        code.mg-sec AWS Lambda
+                        code.mg-sec DynamoDB
+                        code.mg-sec Serverless
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/engage-voice-js') engage-voice-js
+
+                      p RingCentral Engage Voice Client SDK for JavaScript. (CI/Typescript/nodejs/javascript/jest).
+                      p.tags
+                        code.mg-sec Node.js
+                        code.mg-sec Typescript
+                        code.mg-sec Jest
+                        code.mg-sec CI/CD
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/notification-app-js') notification-app-js
+
+                      p Js framework to create RingCentral notification messaging app. (nodejs/AWS Lambda/DynamoDB/serverless).
+                      p.tags
+                        code.mg-sec Node.js
+                        code.mg-sec React
+                        code.mg-sec HTML5
+                        code.mg-sec AWS Lambda
+                        code.mg-sec DynamoDB
+                        code.mg-sec Serverless
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/hubspot-embeddable-ringcentral-phone') hubspot-embeddable-ringcentral-phone
+
+                      p Add RingCentral Embeddable Voice widgets to HubSpot contacts list and call contact page with Chrome extension.
+                      p As a community project, used by many user, even get a company prize for this project
+                      p.tags
+                        code.mg-sec Node.js
+                        code.mg-sec React
+                        code.mg-sec HTML5
+                        code.mg-sec AWS Lambda
+                        code.mg-sec DynamoDB
+                        code.mg-sec Chrome extension
+
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/ringcentral-embeddable-extension-factory') ringcentral-embeddable-extension-factory
+
+                      p Cli tool to create a RingCentral Embeddable Chrome/Firefox extension for CRM sites.
+                      p.tags
+                        code.mg-sec Node.js
+                        code.mg-sec CLI
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/engage-voice-python') engage-voice-python
+
+                      p RingCentral Engage Voice Python API SDK.
+                      p.tags
+                        code.mg-sec Python
+                        code.mg-sec SDK
+
+                    li
+                      p
+                        a.bold(href='https://github.com/ringcentral/ringcentral-notification-app-helper') ringcentral-notification-app-helper
+
+                      p A module to help with communication with with RingCentral app in RingCentral notification app with UI.(TypeScript, javascript,SDK).
+                      p.tags
+                        code.mg-sec Node.js
+                        code.mg-sec Typescript
+                        code.mg-sec Jest
+                        code.mg-sec CI/CD
+
+
+              // timeline unit
+              .time-section
+                .times
+                  span.time.iblock 2016.08
+                  span.time.iblock 2018.06
+                .desc
+                  p Works as Full-stack Engineer for sugo.io, database, api, architecture and solution design, web/desktop app development(nodejs, koa, postgres, html5, react, nginx, electron).
+                  p.tags
+                    code.mg-sec postgres
+                    code.mg-sec react
+                    code.mg-sec webpack
+                    code.mg-sec typescript
+                    code.mg-sec electron
+                    code.mg-sec koa
+                    code.mg-sec vuejs
+
+                .projs
+                  ul
+                    li sugo big data analysis tool
+                    li file service system
+                    li live screen apps
+                    li consumer headlines project
+
+              // /timeline unit
+
+              // timeline unit
+              .time-section
+                .times
+                  span.time.iblock 2015.06
+                  span.time.iblock 2016.03
+                .desc
+                  p Works as Full-stack Engineer(the only one) for baotianqi.cn, database, api, architecture and solution design, website and web app development(nodejs, koa,  mongodb, html5, angularjs, nginx).
+                  p.tags
+                    code.mg-sec nodejs
+                    code.mg-sec nginx
+                    code.mg-sec mongodb
+                    code.mg-sec angularjs
+                    code.mg-sec mocha
+                    code.mg-sec karma
+                    code.mg-sec redis
+                    code.mg-sec koa
+                    code.mg-sec stylus
+                    code.mg-sec jade
+                    code.mg-sec gulp
+                    code.mg-sec pm2
+                    code.mg-sec css
+                    code.mg-sec javascript
+                    code.mg-sec jQuery
+
+                .projs
+                  ul
+                    li weather.baotianqi.cn
+                    li weixin tools...
+                    li lots of api
+                    li mall.baotianqi.cn
+                    li bot.baotianqi.cn
+                    li trade.baotianqi.cn
+                    li ...and more 
+
+
+
+              // /timeline unit
+
+
+              // timeline unit
+              .time-section
+                .times
+                  span.time.iblock 2015.01
+                  span.time.iblock 2015.06
+                .desc
+                  p Works as Full-stack Engineer(the only one), database, api, architecture and solution design, website and web app development(nodejs, koa,  mongodb, html5, angularjs).
+                  p
+                    |In <code>18</code>projects, <code>291585</code>line submitted
+                  p.tags
+                    code.mg-sec nodejs
+                    code.mg-sec mongodb
+                    code.mg-sec angularjs
+                    code.mg-sec mocha
+                    code.mg-sec karma
+                    code.mg-sec redis
+                    code.mg-sec koa
+                    code.mg-sec stylus
+                    code.mg-sec jade
+                    code.mg-sec gulp
+                    code.mg-sec pm2
+                    code.mg-sec css
+                    code.mg-sec javascript
+                    code.mg-sec jQuery
+
+                .projs
+                  ul
+                    li auth.long.tv
+                    li xlm.long.tv
+                    li adx.long.tv
+                    li
+                      a(href='//www.long.tv', rel='external nofollow') long.tv 
+                      
+                    li cms.long.tv
+
+
+
+              // /timeline unit
+
+              // timeline unit
+              .time-section
+                .times
+                  span.time.iblock 2013.07
+                  span.time.iblock 2014.10
+                .desc
+                  p work for qida.com as front-end web developer,  front-end architect, team leader.
+                  p.tags
+                    code.mg-sec nodejs
+                    code.mg-sec node-webkit
+                    code.mg-sec cas
+                    code.mg-sec express
+                    code.mg-sec memcache
+                    code.mg-sec seajs
+                    code.mg-sec underscore
+                    code.mg-sec stylus
+                    code.mg-sec jade
+                    code.mg-sec grunt
+                    code.mg-sec pm2
+                    code.mg-sec css
+                    code.mg-sec javascript
+                    code.mg-sec jQuery
+                .projs
+                  p clm.qida.com, www.qida.com, mingshi.qida.com, mall.qida.com, news.qida.com, admin.qida.com, Courseware Packing Toolkit(node-webkit), news bot crawler...
+                  p Front-end and server(nodejs) end coding and design.
+
+
+              // /timeline unit
+              // timeline unit
+              .time-section
+                .times
+                  span.time.iblock 2012.04
+                  span.time.iblock
+                    span.lang.en.hide 2013.04
+                    span.lang.cn 2013.04
+                .desc
+                  p 
+                    |Work as a front-end developer and team leader at Ponder.com.cn, The best execution award 2012
+                    sup.color-red AWARD
+                  p.tags
+                    code.mg-sec android
+                    code.mg-sec nodejs
+                    code.mg-sec express
+                    code.mg-sec phonegap
+                    code.mg-sec html5
+                    code.mg-sec mui
+                    code.mg-sec css
+                    code.mg-sec jsp
+                    code.mg-sec javascript
+                    code.mg-sec jQuery
+                    code.mg-sec mobile
+                    code.mg-sec ajax
+                    code.mg-sec google map api
+                    code.mg-sec zepto
+
+                .projs
+                  ul
+                    li
+                      p Tax Helper(Android app, based on phonegap)
+                      p All the coding and Design.
+                    li
+                      p
+                        a(href='//www.spds.com.cn', rel='external nofollow', title='四平市地方税务局纳税服务云平台') Tax Service platform for Siping City
+                        | (Front-end coding)。
+
+                    li
+                      p
+                        a(href='//www.jldswssb.gov.cn', rel='external nofollow', title='吉林省地方税务局网上申报') entrance of online tax-declaration for Jilin Province
+                      p All the coding and deployment(nodejs).
+                    li Info center of Jilin province local taxation bureau(All UI and functions)
+                    p Invoice lottery system of Shiping local taxation bureau(All UI and functions).
+
+              // /timeline unit
+              // timeline unit
+              .time-section
+                .times
+                  span.time.iblock 2011.09
+                  span.time.iblock 2012.03
+                .desc
+                  p
+                    span.label.label-primary.mg-sec Not a amateur any More
+                    | Work as a freelancer,work for topcoder.com, and several entrepreneurial teams in beijing.
+                  p.tags
+                    code.mg-sec html
+                    code.mg-sec html5
+                    code.mg-sec css
+                    code.mg-sec php
+                    code.mg-sec extjs
+                    code.mg-sec YUI
+                    code.mg-sec box2d
+                    code.mg-sec mobile
+                    code.mg-sec wordpress
+                    code.mg-sec javascript
+                    code.mg-sec jQuery
+                    code.mg-sec ajax
+                    code.mg-sec ie6+
+                    code.mg-sec canvas
+                    code.mg-sec local storage
+                    code.mg-sec html5 games
+                    code.mg-sec html5 animation
+                .projs
+              // /timeline unit
+              // timeline unit
+              .time-section
+                .times
+                  span.time.iblock 2010.04
+                  span.time.iblock 2011.08
+                .desc
+                  p
+                    span.label.label-primary.mg-sec The coding begins
+                    a(href='//www.anlt-china.com', rel='external nofollow', title='My very first app') ANLT Co. ltd.
+                    p everything of this site is my work,including domain name, virtual host, deploy wordpress,wrote the theme, the plugins,all the posts, SEO, etc.
+                  p.tags
+                    code.mg-sec html
+                    code.mg-sec css
+                    code.mg-sec php
+                    code.mg-sec wordpress
+                    code.mg-sec javascript
+                    code.mg-sec jQuery
+                    code.mg-sec ajax
+                    code.mg-sec ie6+
+                .projs
+              // /timeline unit
+
+              // timeline unit
+              .time-section.compact
+                .times
+                  span.time.iblock 2009
+                  span.time.iblock 2010
+                .desc
+                  p Some short-term jobs, including security guard, building worker, cashier, teaching affairs,  amateur actor.
+                .projs
+              // /timeline unit
+
+              // timeline unit
+              .time-section.compact
+                .times
+                  span.time.iblock 2007
+                  span.time.iblock 2009
+                .desc
+                  p
+
+                    |Work as lab technician at
+                    a(href='#', title='do not click') Shenbang Co.ltd.
+
+                .projs
+                  p Some projects about Bone Marrow Mesenchymal Stem Cells.
+
+              // /timeline unit
+
+              // timeline unit
+              .time-section.compact
+                .times
+                  span.time.iblock 2006
+                  span.time.iblock 2007
+                .desc
+                  p Try passing all the exams and get the Bachelor's degree, failed.
+                .projs
+              // /timeline unit
+
+              // timeline unit
+              .time-section
+                .times
+                  span.time.iblock 2002
+                  span.time.iblock 2006
+                .desc
+                  p
+                    | Student of 
+                    a(href='//www.ustc.edu.cn', rel='external nofollow', title='University of Science and Technology of China') University of Science and Technology of China
+                    | (School of Bio Science)
+                .projs
+              // /timeline unit
+
+              // timeline unit
+              .time-section.compact
+                .times
+                  span.time.iblock 1983.02.17
+                  span.time.iblock 2002
+                .desc
+                  p Born...,--> high school, ignore。
+                .projs
+
+
+            include ../parts/disqus
+            include ../parts/footer-html1
+
+include ../parts/footer-js-noad
+script(src=cdn + '/apps/h5/js/min/timeline1.js?' + version)
+include ../parts/footer-disqus
+include ../parts/footer-end

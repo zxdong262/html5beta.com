@@ -1,0 +1,27 @@
+//left-panel
+.left-panel.col-sm-4.col-md-4.col-lg-3.alignright
+
+	.pdtb.pdlr
+		- if(host + '/' === href )
+			h1.h1
+				a(href=host) html5beta.com
+		- else
+			h3.h1
+				a(href=host) html5beta.com
+		hr
+		p
+			|by 
+			a(href=host + '/page/timeline.html') ZHAO Xudong
+		p.exp.btn-group.btn-group-sm
+			button.shapes-to-text.btn.btn-danger(type='button', title='change the background shapes!') haha
+			button.change-shape.btn.btn-warning(type='button', title='change the background shapes!') change!
+
+	.pdlr
+		a.link.block.pdb(href=host + '/page/timeline.html') Resume
+		a.link.block.pdb(rel='external nofollow', href='//github.com/zxdong262') @github
+		a.link.block.pdb(rel='external nofollow', href='https://www.npmjs.com/~zxdong262') @npm
+		a.link.block.pdb(rel='external nofollow', href='//stackoverflow.com/users/615576/zhao-xudong') @stackoverflow
+		a.link.block.pdb(rel='external nofollow', href='mailto:zxdong@gmail.com') zxdong@gmail.com
+		a.link.block.pdb(href='#') QQ:986839138
+		hr
+		#qr1.pdb

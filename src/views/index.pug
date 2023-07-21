@@ -1,0 +1,34 @@
+include ./parts/head1
+meta(name='description', content='html5beta.com')
+meta(name='keywords', content='html5beta.com')
+title #{siteName}
+style.
+  .post h2 {
+  font-size: 24px;
+  }
+include ./parts/head2
+include ./parts/bg
+#wrapper
+
+  #content.container
+  .row
+
+  //left-panel
+  include ./parts/left-panel
+
+  //main
+  .main.col-sm-8.col-md-8.col-lg-9
+    .pdtb
+    .pdtb.pdlr
+      .post
+        ul
+          each val, i in list
+            li
+              h2
+                a(href=val.homepage || val.url) #{val.title || val.name}
+              p.color-grey #{val.desc || val.description}
+
+
+  include ./parts/footer-html1
+include ./parts/footer-js
+include ./parts/footer-end
