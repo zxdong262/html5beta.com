@@ -1,9 +1,11 @@
-require('dotenv').config()
-const home = require('./home')
-const resume = require('./resume')
-const pack = require('../../package.json')
+import { config as dotenvConfig } from 'dotenv'
+import home from './home.js'
+import resume from './resume.js'
+import { pack } from '../common.js'
 
-module.exports = {
+dotenvConfig()
+
+export default {
   slogon: 'About or not about html5',
   siteName: 'html5beta.com',
   home,
