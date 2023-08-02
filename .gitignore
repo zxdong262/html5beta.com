@@ -35,6 +35,5 @@ coverage
 /releases/
 .vercel
 /public/
-/public/
 .vscode
 /src/**/*.mjs

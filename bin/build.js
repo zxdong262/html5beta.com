@@ -1,4 +1,5 @@
 import { buildPug } from './build-bug.js'
+import { buildStatic } from './build-static.js'
 import {
   mkdir
 } from 'fs/promises'
@@ -13,10 +14,9 @@ const targets = [
 ]
 
 async function build (conf) {
-  const from = resolve(cwd, conf.from)
-  const to = resolve(cwd, conf.to)
-  await mkdir(to).catch(console.log)
-  await buildPug(from, to)
+  await mkdir(resolve(cwd, conf.to)).catch(console.log)
+  await buildPug(conf.from, conf.to)
+  await buildStatic(conf.from, conf.to)
 }
 
 async function main () {

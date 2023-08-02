@@ -1,8 +1,17 @@
 import React, { useState } from 'react'
-import { Button, Input, Space, Toast } from 'antd-mobile'
+import {
+  Button,
+  Input,
+  Space,
+  Toast,
+  Stepper
+} from 'antd-mobile'
+import './qr.styl'
+import Footer from '../../react/footer'
 
 function App () {
   const [text, setText] = useState('')
+  const [size, setSize] = useState(200)
   const [qrCodeUrl, setQrCodeUrl] = useState('')
 
   const generateQRCode = () => {
@@ -16,7 +25,7 @@ function App () {
     const qr = new QRious({
       element: document.getElementById('qrcode'),
       value: text,
-      size: 200
+      size
     })
 
     setQrCodeUrl(qr.toDataURL())
@@ -24,6 +33,9 @@ function App () {
 
   const handleTextChange = (value) => {
     setText(value)
+  }
+  const handleSizeChange = (value) => {
+    setSize(value)
   }
 
   const handleDownload = () => {
@@ -39,25 +51,51 @@ function App () {
   }
 
   return (
-    <div>
+    <div className='main pd2'>
       <h1>QR Code Generator</h1>
-      <Input
-        placeholder='Enter text'
-        value={text}
-        onChange={handleTextChange}
-      />
-      <Space />
-      <Button type='primary' onClick={generateQRCode}>
-        Generate QR Code
-      </Button>
-      <Space />
-      <div id='qrcode' />
-      <Space />
-      {qrCodeUrl && (
-        <Button type='primary' onClick={handleDownload}>
-          Download QR Code
+      <div className='pd1y'>
+        <div className='pd1y'>Text:</div>
+        <Input
+          placeholder='Enter text'
+          value={text}
+          size='large'
+          onChange={handleTextChange}
+        />
+      </div>
+      <div className='pd1y'>
+        <div className='pd1y'>Size:</div>
+        <Stepper
+          placeholder='Enter Size'
+          value={size}
+          size='large'
+          onChange={handleSizeChange}
+        />
+      </div>
+      <div className='pd1y'>
+        <Button
+          color='primary'
+          onClick={generateQRCode}
+          className='mg1r mg1b'
+        >
+          Generate QR Code
         </Button>
-      )}
+        {qrCodeUrl && (
+          <Button
+            color='success'
+            onClick={handleDownload}
+            className='mg1b'
+          >
+            Download QR Code
+          </Button>
+        )}
+      </div>
+      <Space />
+      <div className='pd1y'>
+        <canvas
+          id='qrcode'
+        />
+      </div>
+      <Footer />
     </div>
   )
 }

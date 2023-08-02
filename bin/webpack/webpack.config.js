@@ -1,9 +1,6 @@
 import { env, cwd } from '../common.js'
 import { resolve } from 'path'
-import {
-  extractTextPlugin1,
-  stylusSettingPlugin
-} from './plugins.js'
+import plugins from './plugins.js'
 import devServer from './dev-server.js'
 import rules from './rules.js'
 import prod from './production.js'
@@ -34,10 +31,7 @@ let config = {
     rules
   },
   devtool: 'source-map',
-  plugins: [
-    stylusSettingPlugin,
-    extractTextPlugin1
-  ],
+  plugins,
   devServer
 }
 

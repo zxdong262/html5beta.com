@@ -5,7 +5,7 @@ import { createRoot } from 'react-dom/client'
 import React from 'react'
 import App from './qr.jsx'
 import '../../../css/basic.styl'
-import '../../../css/download.styl'
+import '../../../css/index.styl'
 
 const root = createRoot(document.getElementById('container'))
 root.render(<App />)

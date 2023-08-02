@@ -1,14 +1,5 @@
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin'
-import {
-  extractTextPlugin1,
-  stylusSettingPlugin
-} from './plugins.js'
-
 export default (config) => {
-  config.plugins = [
-    extractTextPlugin1,
-    stylusSettingPlugin
-  ]
   config.optimization = {
     // splitChunks: {
     //   chunks: 'all',

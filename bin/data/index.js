@@ -2,6 +2,7 @@ import { config as dotenvConfig } from 'dotenv'
 import home from './home.js'
 import resume from './resume.js'
 import { pack } from '../common.js'
+import tools from './tools.js'
 
 dotenvConfig()
 
@@ -15,6 +16,7 @@ export default {
     ...resume.openSourced.arr.slice(0, 10)
   ],
   env: 'production',
+  tools,
   cdn: process.env.CDN,
   version: pack.version,
   host: process.env.HOST

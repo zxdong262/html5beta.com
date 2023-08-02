@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "start": "vercel dev",
-    "b": "npm run b1 && npm run b2",
+    "b": "npm run rm && npm run b2 && npm run b1 && npm run cp",
     "b1": "node bin/build-pug-legacy.js",
     "b2": "node bin/build.js",
     "build": "echo \"ok\"",
@@ -15,6 +15,7 @@
     "lint": "standard",
     "pub": "vercel --prod",
     "cp": "cp -r src/static/* public/",
+    "rm": "rm -rf public/ && mkdir public",
     "c": "webpack serve --config bin/webpack/webpack.config.js",
     "bb": "NODE_ENV=production node_modules/.bin/webpack --progress --config bin/webpack/webpack.config.js"
   },
