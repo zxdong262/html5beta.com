@@ -1,7 +1,7 @@
 // resume data
-const extras = require('./open-source-extra')
+import extras from './open-source-extra.js'
 
-module.exports = {
+export default {
 
   // open sourced
   openSourced: {

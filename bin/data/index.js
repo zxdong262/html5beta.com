@@ -1,9 +1,12 @@
-require('dotenv').config()
-const home = require('./home')
-const resume = require('./resume')
-const pack = require('../../package.json')
+import { config as dotenvConfig } from 'dotenv'
+import home from './home.js'
+import resume from './resume.js'
+import { pack } from '../common.js'
+import tools from './tools.js'
 
-module.exports = {
+dotenvConfig()
+
+export default {
   slogon: 'About or not about html5',
   siteName: 'html5beta.com',
   home,
@@ -13,6 +16,7 @@ module.exports = {
     ...resume.openSourced.arr.slice(0, 10)
   ],
   env: 'production',
+  tools,
   cdn: process.env.CDN,
   version: pack.version,
   host: process.env.HOST

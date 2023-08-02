@@ -34,5 +34,6 @@ coverage
 /.env
 /releases/
 .vercel
-/public/*.html
-/public/page
+/public/
+.vscode
+/src/**/*.mjs

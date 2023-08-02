@@ -27,7 +27,15 @@ include ./parts/bg
               h2
                 a(href=val.homepage || val.url) #{val.title || val.name}
               p.color-grey #{val.desc || val.description}
-
+    .pdtb
+    .pdtb.pdlr
+      .post
+        ul
+          each val, i in tools
+            li
+              h2
+                a(href=val.url) #{val.title}
+              p.color-grey #{val.desc}
 
   include ./parts/footer-html1
 include ./parts/footer-js
