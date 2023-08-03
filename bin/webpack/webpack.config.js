@@ -1,11 +1,10 @@
-import { env, cwd } from '../common.js'
+import { env, cwd, isProd } from '../common.js'
 import { resolve } from 'path'
 import plugins from './plugins.js'
 import devServer from './dev-server.js'
 import rules from './rules.js'
 import prod from './production.js'
 
-const isProd = env.NODE_ENV === 'production'
 let config = {
   mode: 'development',
   entry: {

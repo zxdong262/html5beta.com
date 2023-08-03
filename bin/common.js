@@ -7,6 +7,7 @@ conf()
 
 export const cwd = process.cwd()
 export const env = process.env
+export const isProd = env.NODE_ENV === 'production'
 const packPath = resolve(cwd, 'package.json')
 export const pack = JSON.parse(readFileSync(packPath).toString())
 export const version = pack.version

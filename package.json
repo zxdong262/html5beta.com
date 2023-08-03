@@ -27,9 +27,10 @@
     "@babel/preset-react": "^7.22.5",
     "@tsconfig/recommended": "^1.0.2",
     "@types/node": "^20.3.1",
-    "@vercel/node": "^2.15.2",
+    "@vercel/node": "^2.15.8",
     "antd-mobile": "^5.32.0",
     "antd-mobile-icons": "^0.3.0",
+    "axios": "^1.4.0",
     "babel-loader": "^9.1.3",
     "css-loader": "^6.8.1",
     "css-minimizer-webpack-plugin": "^5.0.1",
@@ -50,6 +51,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "shelljs": "^0.8.5",
+    "sitemaps": "^2.0.4",
     "standard": "^17.1.0",
     "stylus-loader": "^7.1.3",
     "typescript": "^5.1.3",
@@ -79,5 +81,8 @@
         "importAssertions"
       ]
     }
+  },
+  "dependencies": {
+    "@roudanio/html2pug": "^1.0.2"
   }
 }

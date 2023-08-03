@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://html5beta.com/sitemap.xml

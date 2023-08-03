@@ -1,7 +1,8 @@
 import logger from 'morgan'
-import { viewPath, env, staticPath } from '../common.js'
+import { viewPath, env, staticPath, cwd } from '../common.js'
 import data from '../data/index.js'
 import express from 'express'
+import { resolve } from 'path'
 
 const devPort = env.SERVER_DEV_PORT || 6068
 const host = env.SERVER_HOST || '127.0.0.1'
@@ -20,6 +21,18 @@ function handler (req, res) {
     jsUrl: h + `/${folder}/${file}/${file}.bundle.js`,
     cssUrl: h + `/${folder}/${file}/${file}.bundle.css`
   })
+}
+
+async function handleApi (req, res, next) {
+  const {
+    api
+  } = req.params
+  console.log('req api')
+  const f = resolve(cwd, 'api', api + '.js')
+  const func = await import(f)
+    .then(d => d.default)
+    .catch(console.log)
+  await func(req, res)
 }
 
 function handlerJs (req, res) {
@@ -69,10 +82,13 @@ export default {
     app.use(
       logger('tiny')
     )
+    app.use(express.json())
+    app.use(express.urlencoded())
     app.use(express.static(staticPath))
     app.set('views', viewPath)
     app.set('view engine', 'pug')
     app.get('/', handleIndex)
+    app.post('/api/:api', handleApi)
     app.get('/page/:name.html', handlePage)
     app.get('/:folder/:file/', handler)
     app.get('/:folder/:file/:jsName', handlerJs)

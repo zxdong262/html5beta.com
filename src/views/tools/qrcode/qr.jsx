@@ -2,11 +2,8 @@ import React, { useState } from 'react'
 import {
   Button,
   Input,
-  Space,
-  Toast,
   Stepper
 } from 'antd-mobile'
-import './qr.styl'
 import Footer from '../../react/footer'
 
 function App () {
@@ -15,12 +12,6 @@ function App () {
   const [qrCodeUrl, setQrCodeUrl] = useState('')
 
   const generateQRCode = () => {
-    if (text.trim() === '') {
-      Toast.show({
-        content: 'Please enter some text to generate a QR code.'
-      })
-      return
-    }
     const { QRious } = window
     const qr = new QRious({
       element: document.getElementById('qrcode'),
@@ -76,6 +67,7 @@ function App () {
           color='primary'
           onClick={generateQRCode}
           className='mg1r mg1b'
+          disabled={!text}
         >
           Generate QR Code
         </Button>
@@ -89,7 +81,6 @@ function App () {
           </Button>
         )}
       </div>
-      <Space />
       <div className='pd1y'>
         <canvas
           id='qrcode'
