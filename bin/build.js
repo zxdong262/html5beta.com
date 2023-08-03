@@ -4,14 +4,7 @@ import {
   mkdir
 } from 'fs/promises'
 import { resolve } from 'path'
-import { cwd } from './common.js'
-
-const targets = [
-  {
-    from: 'src/views/tools',
-    to: 'public/tools'
-  }
-]
+import { cwd, targets } from './common.js'
 
 async function build (conf) {
   await mkdir(resolve(cwd, conf.to)).catch(console.log)

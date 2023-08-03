@@ -2,18 +2,10 @@ doctype html
 html
   head
     title Html to pug converter
-    meta(charset='UTF-8')
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
     meta(name='description' content='Convert html to pug online, it is free.')
     meta(name='keywords' content='html, pug, html2pug, converter, free')
-    meta(name='author' content='ZHAO Xudong')
-    meta(name='robots' content='index, follow')
-    link(rel='canonical' href=url)
-    link(rel='icon' href=host + '/favicon.ico' type='image/x-icon')
-    link(rel='stylesheet', href=cssUrl)
+    include ../../parts/react-header
 
   body
     #container
-    script(crossorigin, src='//unpkg.zhimg.com/react@18/umd/react.production.min.js')
-    script(crossorigin, src='//unpkg.zhimg.com/react-dom@18/umd/react-dom.production.min.js')
-    script(src=jsUrl)
+    include ../../parts/react-footer

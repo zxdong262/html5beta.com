@@ -62,3 +62,10 @@ export function readDir (src, path) {
       }
     })
 }
+
+export const targets = [
+  {
+    from: 'src/views/tools',
+    to: 'public/tools'
+  }
+]

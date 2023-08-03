@@ -7,9 +7,10 @@
   "type": "module",
   "scripts": {
     "start": "vercel dev",
-    "b": "npm run rm && npm run b2 && npm run b1 && npm run cp",
+    "b": "npm run rm && npm run b2 && npm run b1 && npm run cp && npm run sitemap",
     "b1": "node bin/build-pug-legacy.js",
     "b2": "node bin/build.js",
+    "sitemap": "node bin/sitemap.js",
     "build": "echo \"ok\"",
     "fix": "standard --fix",
     "lint": "standard",
