@@ -18,8 +18,5 @@ export function copyTextToClipboard (text, id = 'copy') {
     })
   } catch (err) {
     console.error('Failed to copy text:', err)
-  } finally {
-    // Clean up by removing the temporary textarea
-    document.body.removeChild(textArea)
   }
 }
