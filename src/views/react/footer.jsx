@@ -7,7 +7,7 @@ export default function Footer () {
         <a
           href={host}
         >
-          @ html5beta.com
+          © html5beta.com
         </a>
       </div>
     </div>

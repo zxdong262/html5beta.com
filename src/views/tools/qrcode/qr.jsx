@@ -5,6 +5,7 @@ import {
   Stepper
 } from 'antd-mobile'
 import Footer from '../../react/footer'
+import Header from '../../react/header'
 
 function App () {
   const [text, setText] = useState('')
@@ -43,6 +44,7 @@ function App () {
 
   return (
     <div className='main pd2'>
+      <Header />
       <h1>QR Code Generator</h1>
       <div className='pd1y'>
         <div className='pd1y'>Text:</div>

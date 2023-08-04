@@ -1,7 +1,7 @@
 // create sitemap
 import fs from 'fs/promises'
 import { createSitemap } from 'sitemaps'
-import { cap, exe, env, targets, cwd } from './common.js'
+import { targets, cwd } from './common.js'
 import { resolve } from 'path'
 import dayjs from 'dayjs'
 import data from './data/index.js'

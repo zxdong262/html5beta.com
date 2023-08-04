@@ -6,7 +6,7 @@ import {
 } from 'antd-mobile'
 import './qr.styl'
 import Footer from '../../react/footer'
-import axios from 'axios'
+import Header from '../../react/header'
 import { host } from '../../react/common'
 
 function App () {
@@ -17,15 +17,21 @@ function App () {
   const convert = async () => {
     setLoading(true)
     const url = host + '/api/html2pug'
-    const r = await axios.post(url, {
-      html: text
+    const r = await window.fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ html: text })
     })
-      .then(d => d.data.pug)
+      .then(d => d.json())
+      .then(d => d.pug)
       .catch(err => {
         Toast.show({
           content: err.message
         })
       })
+
     setLoading(false)
     if (r) {
       setPug(r)
@@ -38,6 +44,7 @@ function App () {
 
   return (
     <div className='main pd2'>
+      <Header />
       <h1>Html to pug</h1>
       <div className='pd1y'>
         <div className='pd1y'>Html:</div>

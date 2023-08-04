@@ -9,6 +9,15 @@ config()
 const host = isProd
   ? data.host
   : `http://127.0.0.1:${env.SERVER_DEV_PORT}`
+const url = isProd
+  ? env.URL
+  : host + env.OUT.replace('public', '') + '/'
+const title = isProd
+  ? env.TITLE
+  : 'dev title'
+const desc = isProd
+  ? env.DESC
+  : 'dev desc'
 export default [
   new MiniCssExtractPlugin({
     filename: '[name].bundle.css'
@@ -22,7 +31,10 @@ export default [
   }),
   new webpack.DefinePlugin({
     'process.env': {
-      HOST: JSON.stringify(host)
+      HOST: JSON.stringify(host),
+      URL: JSON.stringify(url),
+      TITLE: JSON.stringify(title),
+      DESC: JSON.stringify(desc)
     }
   })
 ]
