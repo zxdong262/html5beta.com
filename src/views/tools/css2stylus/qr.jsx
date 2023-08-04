@@ -43,7 +43,7 @@ function App () {
       <div className='pd1y'>
         <div className='pd1y'>Css:</div>
         <TextArea
-          placeholder='Enter html'
+          placeholder='Enter css'
           value={text}
           size='large'
           rows={10}
