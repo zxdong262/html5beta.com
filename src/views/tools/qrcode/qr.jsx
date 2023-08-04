@@ -6,6 +6,7 @@ import {
 } from 'antd-mobile'
 import Footer from '../../react/footer'
 import Header from '../../react/header'
+import './qr.styl'
 
 function App () {
   const [text, setText] = useState('')
