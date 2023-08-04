@@ -14,7 +14,7 @@
     "build": "echo \"ok\"",
     "fix": "standard --fix",
     "lint": "standard",
-    "pub": "vercel --prod",
+    "pub": "npm run b && vercel --prod",
     "cp": "cp -r src/static/* public/",
     "rm": "rm -rf public/ && mkdir public",
     "c": "webpack serve --config bin/webpack/webpack.config.js",
