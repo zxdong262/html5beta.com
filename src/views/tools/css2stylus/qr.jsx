@@ -37,7 +37,7 @@ function App () {
   }
 
   return (
-    <div className='main pd2'>
+    <div className='pd2'>
       <Header />
       <h1>Css to Stylus</h1>
       <div className='pd1y'>

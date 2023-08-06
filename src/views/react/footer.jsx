@@ -1,4 +1,5 @@
 import { host } from './common'
+import Animate from './animate'
 
 export default function Footer () {
   return (
@@ -10,6 +11,7 @@ export default function Footer () {
           © html5beta.com
         </a>
       </div>
+      <Animate />
     </div>
   )
 }

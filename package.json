@@ -6,7 +6,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "vercel dev",
+    "start": "npm run c",
     "b": "npm run rm && npm run b2 && npm run b1 && npm run cp && npm run sitemap",
     "b1": "node bin/build-pug-legacy.js",
     "b2": "node bin/build.js",

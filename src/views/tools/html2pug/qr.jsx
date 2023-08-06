@@ -47,7 +47,7 @@ function App () {
   }
 
   return (
-    <div className='main pd2'>
+    <div className='pd2'>
       <Header />
       <h1>Html to pug</h1>
       <div className='pd1y'>
