@@ -16,8 +16,8 @@ html
               each val, i in apps
                 li
                   h3
-                    a(href=val.url) #{val.title}
-                  p.color-grey #{val.desc}
+                    a(href=val.url || val.homepage) #{val.title || val.name}
+                  p.color-grey #{val.desc || val.description}
           .column
             h2 Tools
             ul
