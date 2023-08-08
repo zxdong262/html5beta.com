@@ -1,17 +1,34 @@
 import { host } from './common'
 import Animate from './animate'
 
-export default function Footer () {
+function renderLink (link) {
+  const { text, ...args } = link
+  return (
+    <a {...args} key={text}>{text}</a>
+  )
+}
+
+export default function Footer (props) {
   return (
     <div className='mg3y pd3y'>
       <div>
         <a
           href={host}
+          className='mg3r'
         >
-          © html5beta.com
+          © ZHAO Xudong
         </a>
+        {
+          (props.links || []).map(renderLink)
+        }
       </div>
-      <Animate />
+      {
+        props.noAnimate
+          ? null
+          : (
+            <Animate />
+            )
+      }
     </div>
   )
 }

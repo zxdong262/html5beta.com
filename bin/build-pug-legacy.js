@@ -7,10 +7,15 @@ async function buildIndex () {
   const src = path.resolve(new URL('../src/views/index.pug', import.meta.url).pathname)
   const tar = path.resolve(new URL('../public/index.html', import.meta.url).pathname)
   const pugContent = await fs.readFile(src, 'utf8')
+  const url = data.host
+  const name = 'index'
   const htmlContent = pug.render(pugContent, {
     filename: src,
     ...data,
-    pretty: false
+    pretty: false,
+    url,
+    cssUrl: url + '/' + name + '.bundle.css',
+    jsUrl: url + '/' + name + '.bundle.js'
   })
   await fs.writeFile(tar, htmlContent, 'utf8')
 }

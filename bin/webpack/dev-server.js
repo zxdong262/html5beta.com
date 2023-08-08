@@ -47,7 +47,10 @@ function handleIndex (req, res) {
   const view = 'index'
   res.render(view, {
     ...data,
-    host: h
+    host: h,
+    url: h,
+    cssUrl: h + '/' + view + '.bundle.css',
+    jsUrl: h + '/' + view + '.bundle.js'
   })
 }
 

@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
+import CanvasShapesBg from 'canvas-shapes-bg'
 
 export default function Animate () {
   const [on, setOn] = useState(true)
-  const [shape, setShape] = useState('bubble')
+  const [shape, setShape] = useState(window.initShape || 'bubble')
   const pool = ['star', 'bubble', 'heart', 'light', 'balloon']
   const len = pool.length
   function toggle () {
@@ -22,7 +23,7 @@ export default function Animate () {
       maxSize: 150, // shape size max, optional
       shapesPool: [shape] // what shape you want draw, inside there are 'star', 'bubble', 'heart', 'light', 'balloon', optional, default is ['star']
     }
-    const shapesInst = new window.CanvasShapesBg(
+    const shapesInst = new CanvasShapesBg(
       document.getElementById('ca'),
       options
     )

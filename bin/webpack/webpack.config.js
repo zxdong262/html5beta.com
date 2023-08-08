@@ -20,7 +20,8 @@ let config = {
   },
   externals: {
     react: 'React',
-    'react-dom': 'ReactDOM'
+    'react-dom': 'ReactDOM',
+    'canvas-shapes-bg': 'CanvasShapesBg'
   },
   target: 'web',
   resolve: {

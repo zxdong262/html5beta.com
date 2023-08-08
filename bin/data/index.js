@@ -3,6 +3,7 @@ import home from './home.js'
 import resume from './resume.js'
 import { pack } from '../common.js'
 import tools from './tools.js'
+import apps from './apps.js'
 import sampleSize from 'lodash/sampleSize.js'
 
 dotenvConfig()
@@ -15,10 +16,11 @@ export default {
   list: [
     ...home,
     resume.openSourced.arr[0],
-    ...sampleSize(resume.openSourced.arr.slice(1), 10)
+    ...sampleSize(resume.openSourced.arr.slice(1), 2)
   ],
   env: 'production',
   tools,
+  apps,
   cdn: process.env.CDN,
   version: pack.version,
   host: process.env.HOST

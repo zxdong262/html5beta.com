@@ -67,5 +67,9 @@ export const targets = [
   {
     from: 'src/views/tools',
     to: 'public/tools'
+  },
+  {
+    from: 'src/views/apps',
+    to: 'public/apps'
   }
 ]
