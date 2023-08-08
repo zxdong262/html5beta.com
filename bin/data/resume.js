@@ -8,19 +8,6 @@ export default {
     arr: [
       ...extras,
       {
-        name: 'react-pagenav',
-        description: 'react pagenav component',
-        keywords: [
-          'react',
-          'pagenav'
-        ],
-        homepage: 'http://html5beta.com/apps/react-pagenav.html',
-        repository: {
-          type: 'git',
-          url: 'https://github.com/zxdong262/react-pagenav'
-        }
-      },
-      {
         name: 'simple-modules',
         description: 'simple dom/ajax/event handler etc',
         keywords: [
@@ -43,19 +30,6 @@ export default {
         repository: {
           type: 'git',
           url: 'https://github.com/zxdong262/svg-reader'
-        }
-      },
-      {
-        name: 'vue-pagenav',
-        description: 'a vuejs pagenav plugin',
-        keywords: [
-          'vuejs',
-          'pagenav'
-        ],
-        homepage: 'http://html5beta.com/apps/vue-pagenav.html',
-        repository: {
-          type: 'git',
-          url: 'https://github.com/zxdong262/vue-pagenav'
         }
       },
       {
@@ -148,20 +122,6 @@ export default {
         }
       },
       {
-        name: 'vue-jade-editor',
-        description: 'jade online editor plugin for vue.js',
-        keywords: [
-          'jade',
-          'editor',
-          'vue'
-        ],
-        homepage: 'http://html5beta.com/apps/vue-jade-editor.html',
-        repository: {
-          type: 'git',
-          url: 'https://github.com/zxdong262/vue-jade-editor'
-        }
-      },
-      {
         name: 's-validater',
         description: 'a validate lib for nodejs.',
         repository: {
@@ -187,19 +147,6 @@ export default {
         homepage: 'https://github.com/zxdong262/pager'
       },
       {
-        name: 'angular-pagenav',
-        description: 'a angular pagenav directive',
-        keywords: [
-          'angular',
-          'pagenav'
-        ],
-        homepage: 'http://html5beta.com/apps/angular-pagenav.html',
-        repository: {
-          type: 'git',
-          url: 'https://github.com/zxdong262/angular-pagenav'
-        }
-      },
-      {
         name: 'canvas-captcha',
         description: 'a nodejs captcha module based on node-canvas',
         repository: {
@@ -212,20 +159,6 @@ export default {
           'cairo'
         ],
         homepage: 'https://github.com/zxdong262/canvas-captcha'
-      },
-      {
-        name: 'universe-bg',
-        description: 'this plugin will draw simple universe in canvas with three.js',
-        keywords: [
-          'canvas',
-          'three.js',
-          'universe'
-        ],
-        homepage: 'http://html5beta.com/apps/universe.html',
-        repository: {
-          type: 'git',
-          url: 'https://github.com/zxdong262/universe'
-        }
       },
       {
         name: 'promise-mongo',
@@ -255,20 +188,6 @@ export default {
         homepage: 'https://github.com/zxdong262/canvas-qr'
       },
       {
-        name: 'mobile-slider',
-        description: 'slider zepto plugin for mobile device',
-        homepage: 'http://html5beta.com/apps/mobile-slider.html',
-        repository: {
-          type: 'git',
-          url: 'https://github.com/zxdong262/mobile-slider'
-        },
-        keywords: [
-          'mobile',
-          'slider',
-          'zepto'
-        ]
-      },
-      {
         name: 'jade-precompiler',
         description: 'comile a folder of jade template to javascript code text so you can insert them to jade template later.',
         repository: {
@@ -291,160 +210,6 @@ export default {
           'validate'
         ],
         homepage: 'https://github.com/zxdong262/light-validater'
-      },
-      {
-        name: 'canvas-shapes',
-        description: 'this jquery plugin will draw simple shape moving animation in canvas',
-        keywords: [
-          'canvas',
-          'shape',
-          'jquery',
-          'jquery-plugin',
-          'ecosystem:jquery'
-        ],
-        homepage: 'http://html5beta.com/apps/canvas-shapes.html',
-        repository: {
-          type: 'git',
-          url: 'https://github.com/zxdong262/canvas-shapes'
-        }
-      },
-      {
-        name: 'dialog-system',
-        description: 'a jquery dialog plugin.',
-        keywords: [
-          'dialog',
-          'jQuery'
-        ],
-        repository: {
-          type: 'git',
-          url: 'https://github.com/zxdong262/dialog-system'
-        },
-        homepage: 'http://html5beta.com/apps/dialog-system.html'
-      },
-      {
-        name: 'paper-slider.js',
-        description: 'a paper effect slider jQuery plugin.',
-        keywords: [
-          'paper',
-          'slider'
-        ],
-        repository: {
-          type: 'git',
-          url: 'https://github.com/zxdong262/paper-slider.js'
-        },
-        homepage: 'http://html5beta.com/paper-slider/'
-      },
-      {
-        name: 'mui',
-        description: 'a ui framework for mobile webview app.',
-        repository: {
-          type: 'git',
-          url: 'https://github.com/zxdong262/mui'
-        },
-        keywords: [
-          'mui',
-          'zepto',
-          'ui'
-        ],
-        homepage: 'http://html5beta.com/mui/'
-      },
-      {
-        name: 'zui',
-        description: 'a ui framework based on zepto.',
-        repository: {
-          type: 'git',
-          url: 'https://github.com/zxdong262/zui'
-        },
-        keywords: [
-          'mui',
-          'zepto',
-          'ui'
-        ],
-        homepage: 'http://html5beta.com/zui/'
-      },
-      {
-        name: 'jquery.response-slider.js',
-        description: 'jQuery response slider is a simple slide can auto resize.',
-        repository: {
-          type: 'git',
-          url: 'https://github.com/zxdong262/jquery.response-slider'
-        },
-        keywords: [
-          'jQuery',
-          'response',
-          'slider'
-        ],
-        homepage: 'http://html5beta.com/jquery-2/jquery-response-slider/'
-      },
-      {
-        name: 'jquery.fade-slider',
-        description: 'jQuery fade slider is a simple fade effect slider can auto resize.',
-        repository: {
-          type: 'git',
-          url: 'https://github.com/zxdong262/jquery.fade-slider'
-        },
-        keywords: [
-          'jQuery',
-          'response',
-          'slider'
-        ],
-        homepage: 'http://html5beta.com/jquery-2/jquery-fade-slider/'
-      },
-      {
-        name: 'wordpress-node-companion',
-        description: 'a companion app for wordpress, serve wordpress content by express(nodejs)',
-        repository: {
-          type: 'git',
-          url: 'https://github.com/zxdong262/wordpress-node-companion'
-        },
-        keywords: [
-          'jQuery',
-          'response',
-          'slider'
-        ],
-        homepage: 'https://github.com/zxdong262/wordpress-node-companion'
-      },
-      {
-        name: 'source-code-draw',
-        description: 'a simply app which will convert image to source code drawing',
-        repository: {
-          type: 'git',
-          url: 'https://github.com/zxdong262/source-code-draw'
-        },
-        keywords: [
-          'jQuery',
-          'response',
-          'slider'
-        ],
-        homepage: 'http://html5beta.com/apps/source-code-draw.html'
-      },
-      {
-        name: 'WP ajax Collapsing Categories',
-        description: 'This plugin uses jQuery to expand or collapsable the set of posts for each category, uses ajax to get the expandable content from server.',
-        repository: {
-          type: 'wordpress plugin',
-          url: 'http://wordpress.org/extend/plugins/wp-ajax-collapsing-categories/'
-        },
-        keywords: [
-          'wordpress',
-          'olugin',
-          'ajax'
-        ],
-        homepage: 'http://html5beta.com/wordpress/wp-ajax-collapsing-categories/'
-      },
-      {
-        name: 'WP Simple Captcha',
-        description: 'lots of robot spam commenters,i really get rid of them,hope it will not cost much.so I write this little plugin to do the work',
-        repository: {
-          type: 'wordpress plugin',
-          url: 'http://wordpress.org/extend/plugins/wp-simple-captcha/'
-        },
-        keywords: [
-          'wordpress',
-          'olugin',
-          'ajax'
-        ],
-        homepage: 'http://html5beta.com/wordpress/wp-simple-captcha/'
       }
     ]
   },
