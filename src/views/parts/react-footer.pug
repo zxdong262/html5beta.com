@@ -1,8 +1,32 @@
-script(crossorigin, src='//unpkg.zhimg.com/react@18/umd/react.production.min.js')
-script(crossorigin, src='//unpkg.zhimg.com/react-dom@18/umd/react-dom.production.min.js')
+
+script(crossorigin, src='https://unpkg.zhimg.com/react@18/umd/react.production.min.js')
+script(crossorigin, src='https://unpkg.zhimg.com/react-dom@18/umd/react-dom.production.min.js')
 script(crossorigin, src='https://cdn.jsdelivr.net/npm/canvas-shapes-bg/dist/canvas-shapes-bg.min.js')
-script(src=jsUrl)
-script(crossorigin, src='https://www.googletagmanager.com/gtag/js?id=G-0FRVEJZ2Z2')
+//- script.
+//-   console.log(URL)
+//-   Object.defineProperty( window, 'URL', {
+//-     writable: false
+//-   })
+//-   Object.defineProperty(obj, 'readOnlyProp', {
+//-   value: 'This property is read-only',
+//-   writable: false, // Make it read-only
+//-   enumerable: true, // Can be enumerated
+//-   configurable: false, // Can't be deleted or reconfigured
+//- });
+
+
+- if (dev)
+  script(type='module').
+    import RefreshRuntime from '/@react-refresh'
+    RefreshRuntime.injectIntoGlobalHook(window)
+    window.$RefreshReg$ = () => {}
+    window.$RefreshSig$ = () => (type) => type
+    window.__vite_plugin_react_preamble_installed__ = true
+  script(src='/@vite/client', type='module')
+  script(src=jsUrl, type='module')
+- else
+  script(src=jsUrl, type='module')
+script(crossorigin, async, src='https://www.googletagmanager.com/gtag/js?id=G-0FRVEJZ2Z2')
 script.
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}

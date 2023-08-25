@@ -16,7 +16,7 @@ export const buildPug = async (sourceDir, targetDir) => {
     await fs.mkdir(dirToMake).catch(console.log)
     const pugContent = await fs.readFile(filePath, 'utf8')
     const urlPath = targetDir.replace('public/', '')
-    const url = data.host + '/' + urlPath + '/' + name + '/'
+    const url = '/' + urlPath + '/' + name + '/'
     const htmlContent = pug.render(pugContent, {
       filename: filePath,
       ...data,

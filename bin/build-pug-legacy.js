@@ -14,8 +14,8 @@ async function buildIndex () {
     ...data,
     pretty: false,
     url,
-    cssUrl: url + '/' + name + '.bundle.css',
-    jsUrl: url + '/' + name + '.bundle.js'
+    cssUrl: '/' + name + '.bundle.css',
+    jsUrl: '/' + name + '.bundle.js'
   })
   await fs.writeFile(tar, htmlContent, 'utf8')
 }
