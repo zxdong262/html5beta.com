@@ -21,6 +21,42 @@ export default [
     ]
   },
   {
+    org: 'electerm',
+    name: 'electerm-sync-server-vercel',
+    homepage: 'https://github.com/electerm/electerm-sync-server-vercel',
+    description: 'A simple electerm data sync server for Vercel, written with nodejs/ts, data stored in [cloud.mongodb.com](free tier is enough).',
+    stargazers_count: 0,
+    language: 'TypeScript',
+    repository: {
+      type: 'git',
+      url: 'https://github.com/electerm/electerm-sync-server-vercel'
+    },
+    visibility: 'public',
+    keywords: [
+      'electerm',
+      'sync',
+      'vercel'
+    ]
+  },
+  {
+    org: 'electerm',
+    name: 'electerm-sync-server-rust',
+    homepage: 'https://github.com/electerm/electerm-sync-server-rust',
+    description: 'A simple rust electerm data sync server.',
+    stargazers_count: 0,
+    language: 'rust',
+    repository: {
+      type: 'git',
+      url: 'https://github.com/electerm/electerm-sync-server-rust'
+    },
+    visibility: 'public',
+    keywords: [
+      'electerm',
+      'sync',
+      'rust'
+    ]
+  },
+  {
     org: 'ringcentral',
     name: 'ringcentral-chatbot-python',
     homepage: 'https://github.com/ringcentral/ringcentral-chatbot-python',

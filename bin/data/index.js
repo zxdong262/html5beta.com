@@ -15,7 +15,8 @@ export default {
   resume,
   list: [
     ...home,
-    ...sampleSize(resume.openSourced.arr.slice(0, 7), 7)
+    resume.openSourced.arr[0],
+    ...sampleSize(resume.openSourced.arr.slice(1, 9), 6)
   ],
   env: 'production',
   tools,
