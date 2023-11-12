@@ -83,7 +83,7 @@ include ../parts/bg
                 - var restNum = arr.length - showNum
                 - for(var i = 0, len = showNum;i < len;i ++) {
                   - var ops = arr[i]
-                  a(href=ops.homepage, title=ops.description) #{ops.name}(#{ops.stargazers_count || 0}⭐)
+                  a(href=ops.homepage, title=ops.description) #{ops.name}(#{ops.stargazers_count || 0}★)
                   |,
                 - }
                 a.more(href='#open-sourced') and more...
