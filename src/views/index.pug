@@ -38,6 +38,9 @@ html
 
         #container
     script.
-      window.initShape = 'light'
+      const arr =  ['star', 'bubble', 'heart', 'light', 'balloon'];
+      const len = arr.length;
+      const random = Math.floor(Math.random() * len);
+      window.initShape = arr[random];
     include ./parts/react-common
     include ./parts/react-footer
