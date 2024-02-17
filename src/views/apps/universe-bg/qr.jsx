@@ -21,6 +21,16 @@ const inst = new UniverseBg({
 })
   `
   const code2 = `
+  <style>
+  .animate {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: -1
+  }
+  </style>
   <script async="" src="//unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
   <script type="importmap">
   {
