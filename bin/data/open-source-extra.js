@@ -21,6 +21,23 @@ export default [
     ]
   },
   {
+    org: 'zxdong262',
+    name: 'zmodem-ts',
+    homepage: 'https://github.com/zxdong262/zmodem-ts',
+    description: 'Just rewrite with ts(except for browser.js), provide a more modern code base for users, should gain a little bit performance.',
+    stargazers_count: 1,
+    language: 'JavaScript',
+    repository: {
+      type: 'git',
+      url: 'https://github.com/zxdong262/zmodem-ts'
+    },
+    visibility: 'public',
+    keywords: [
+      'zmodem',
+      'ts'
+    ]
+  },
+  {
     org: 'electerm',
     name: 'electerm-sync-server-vercel',
     homepage: 'https://github.com/electerm/electerm-sync-server-vercel',
