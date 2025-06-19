@@ -21,7 +21,7 @@ export default {
   env: 'production',
   tools,
   apps,
-  cdn: process.env.CDN,
+  cdn: process.env.CDN || 'https://html5beta.com',
   version: pack.version,
-  host: process.env.HOST
+  host: process.env.HOST || 'https://html5beta.com'
 }
