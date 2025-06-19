@@ -39,7 +39,6 @@
     "shelljs": "^0.8.5",
     "sitemaps": "^2.0.4",
     "standard": "^17.1.0",
-    "three": "^0.155.0",
     "universe-bg": "^1.0.0",
     "vite": "^4.4.9",
     "vite-plugin-purgecss": "^0.2.12"
@@ -49,7 +48,7 @@
     "url": "git+https://github.com/zxdong262/html5beta.com.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/zxdong262/html5beta.com/issues"
   },
