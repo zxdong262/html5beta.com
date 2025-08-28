@@ -1,4 +1,4 @@
-import html2pug from '@roudanio/html2pug'
+
 
 export default async function handler (req, res) {
   const {
@@ -10,7 +10,7 @@ export default async function handler (req, res) {
   }
   let pug = ''
   try {
-    pug = html2pug(req.body.html)
+    pug = ''
   } catch (e) {
     console.log(e)
     return res.status(400).send(e.messgage)
