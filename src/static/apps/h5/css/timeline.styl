@@ -1,0 +1,146 @@
+@charset 'utf-8'
+#timeline
+	position relative
+	margin-top 40px
+
+#timeline
+	.post-outer
+		position relative
+		line-height 1.8
+		padding-top 30px
+	.btn-lang
+		position absolute
+		right 20px
+		top 0px
+		border-radius 0 0 4px 4px
+		color #F90
+		border-top none
+		border-color #a87
+		&:hover
+			color #C00
+			border-color #999
+	.tabs
+		border-bottom 2px solid #ddd
+		.tab
+			margin-right 15px
+			color #777
+			&.on
+				color #222
+				font-weight bold
+	div
+		&.open-sourced
+			a
+				&.block
+					font-size 16px
+					font-weight bold
+					line-height 2em
+			li
+				padding 4px 0
+				.tags
+					display none
+				& > a
+					margin-right 4px
+					color #888
+					&:hover
+						color #333
+				.title
+					color #08c
+					font-weight 300
+					font-size 14px
+	.btn-tag
+		margin 5px 0 0 5px
+		color #999
+		&:hover
+			border-color #999
+			color #555
+	.time-sections
+		padding 25px 0
+		position relative
+		&:before
+			content ""
+			position absolute
+			left 50px
+			width 3px
+			top 15px
+			bottom 15px
+			background #999
+			background rgba(0,0,0,0.1)
+	.time-section
+		margin 0 10px 10px 20px
+		padding 10px
+		border-bottom 1px solid #ddd
+		position relative
+		&:before
+			content ""
+			position absolute
+			top 2px
+			left 33px
+			width 9px
+			height 9px
+			border 3px solid #fff
+			border-radius 40px
+			margin 16px 0 0 -6px
+			box-shadow 0 1px 1px rgba(0,0,0,0.2), inset 0 1px 1px rgba(0,0,0,0.1)
+			background #ccc
+		&:hover
+			&:before
+				background orange
+		.times
+			padding 6px 12px
+			position relative
+			background #ddd
+			border-radius 4px
+			margin-left 50px
+			font-size 14px
+			font-weight bold
+			&:before
+				border-color transparent #ddd
+				border-style solid
+				border-width 5px 8px 5px 0
+				content ""
+				display block
+				left -8px
+				position absolute
+				top 9px
+				width 0
+			.arr
+				padding 0 5px
+			.expand
+				position absolute
+				right 10px
+				top 6px
+		.tags
+			.btn
+				padding 3px 8px 4px
+				margin 0 3px 3px 0
+
+.tags-tip
+	width 500px
+	background #fff
+	.btn
+		border-color #888
+		margin 0 4px 4px 0
+
+.tooltip
+	background #fff
+
+#timeline .time-section .projs,
+#timeline .time-section .desc
+	margin-left 50px
+	padding 10px
+
+#timeline .time-section.compact .projs,
+#timeline .time-section.compact .desc
+	display none
+
+#none-modern-browser-warning
+	a
+		color #08c
+
+#about-me
+	p
+		margin 0
+	#menu-worklists
+		margin 0
+		padding-left 15px
+
