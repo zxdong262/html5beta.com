@@ -2,7 +2,7 @@ export default [
   {
     org: 'electerm',
     name: 'electerm',
-    homepage: 'https://github.com/electerm/electerm',
+    homepage: 'https://electerm.html5beta.com',
     description: '📻Terminal/ssh/sftp client(linux, mac, win)',
     stargazers_count: 12851,
     language: 'JavaScript',
