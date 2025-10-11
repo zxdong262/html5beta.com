@@ -21,13 +21,13 @@
   h1 Html to pug
   .pd1y
     .pd1y Html:
-    textarea#html-input(placeholder='Enter html', rows='10')
+    textarea#html-input.w100(placeholder='Enter html', rows='10')
   .pd1y
     button#convert-btn.mg1r.mg1b(color='primary', disabled) Convert to pug
   .pd1y
     .pd1y.fix
       b.fleft pug:
       button#copy-btn.fright.hide(color='default') Copy To Clipboard
-    textarea#pug(placeholder='', rows='10')
+    textarea#pug.w100(placeholder='', rows='10')
   .toast.hide#toast
   include ../../react/footer.pug
