@@ -7,7 +7,40 @@ import apps from './apps.js'
 import sampleSize from 'lodash/sampleSize.js'
 
 dotenvConfig()
-
+const links = [
+  {
+    url: 'https://github.com/electerm/electerm-web',
+    title: 'electerm-web'
+  },
+  {
+    url: 'https://github.com/electerm/electerm-web-docker',
+    title: 'electerm-web-docker'
+  },
+  {
+    url: 'https://github.com/electerm/electerm-locales',
+    title: 'electerm-locales'
+  },
+  {
+    url: 'https://www.microsoft.com/store/apps/9NCN7272GTFF',
+    title: 'Windows Store'
+  },
+  {
+    url: 'https://snapcraft.io/electerm',
+    title: 'Snap Store'
+  },
+  {
+    url: 'https://electerm-repos.html5beta.com/deb',
+    title: 'Electerm Debian Repository'
+  },
+  {
+    url: 'https://electerm.html5beta.com/sponsor-electerm.html',
+    title: 'Sponsor Electerm'
+  },
+  {
+    url: 'https://electerm-cloud.html5beta.com/',
+    title: 'electerm cloud'
+  }
+]
 export default {
   slogon: 'ZHAO Xudong\'s Blog',
   siteName: 'html5beta.com',
@@ -16,7 +49,8 @@ export default {
   list: [
     ...home,
     resume.openSourced.arr[0],
-    ...sampleSize(resume.openSourced.arr.slice(1, 9), 6)
+    ...sampleSize(resume.openSourced.arr.slice(1, 9), 6),
+    ...links
   ],
   env: 'production',
   title: 'ZHAO Xudong\'s Blog - html5beta.com',
