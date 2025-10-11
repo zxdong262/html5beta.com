@@ -1,0 +1,33 @@
+.pd2
+  style.
+    .toast {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #1890ff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      z-index: 1000;
+      transition: opacity 0.3s;
+    }
+    .toast.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+  include ../../react/header.pug
+
+  h1 Html to pug
+  .pd1y
+    .pd1y Html:
+    textarea#html-input(placeholder='Enter html', rows='10')
+  .pd1y
+    button#convert-btn.mg1r.mg1b(color='primary', disabled) Convert to pug
+  .pd1y
+    .pd1y.fix
+      b.fleft pug:
+      button#copy-btn.fright.hide(color='default') Copy To Clipboard
+    textarea#pug(placeholder='', rows='10')
+  .toast.hide#toast
+  include ../../react/footer.pug

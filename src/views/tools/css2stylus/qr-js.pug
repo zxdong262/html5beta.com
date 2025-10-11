@@ -1,0 +1,41 @@
+script.
+  (function() {
+    let text = ''
+    let stylus = ''
+    const cssInput = document.getElementById('css-input')
+    const convertBtn = document.getElementById('convert-btn')
+    const copyBtn = document.getElementById('copy-btn')
+    const stylusTextarea = document.getElementById('stylus')
+    const toast = document.getElementById('toast')
+
+    function showToast(message) {
+      toast.textContent = message
+      toast.classList.remove('hide')
+      setTimeout(() => {
+        toast.classList.add('hide')
+      }, 3000)
+    }
+
+    cssInput.addEventListener('input', (e) => {
+      text = e.target.value
+      convertBtn.disabled = !text
+    })
+
+    convertBtn.addEventListener('click', () => {
+      try {
+        const converter = new window.Css2Stylus.Converter(text)
+        converter.processCss()
+        stylus = converter.getStylus()
+        stylusTextarea.value = stylus
+        copyBtn.classList.remove('hide')
+      } catch (err) {
+        showToast(err.message)
+      }
+    })
+
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(stylus).then(() => {
+        showToast('Copied to clipboard')
+      })
+    })
+  })()

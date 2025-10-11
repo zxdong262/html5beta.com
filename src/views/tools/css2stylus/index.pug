@@ -5,10 +5,30 @@ html
     meta(name='description' content='Convert css to stylus online, it is free.')
     meta(name='keywords' content='css, stylus, converter, free')
     include ../../parts/react-header
+    style.
+      .toast {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #1890ff;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 4px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        z-index: 1000;
+        transition: opacity 0.3s;
+      }
+      .toast.hide {
+        opacity: 0;
+        pointer-events: none;
+      }
 
   body
     #main
       #container.main
+        include qr.pug
+
     include ../../parts/react-common
     script(crossorigin, src='//cdn.jsdelivr.net/npm/css2stylus@0.5.0/lib/css2stylus.min.js')
+    include ./qr-js.pug
     include ../../parts/react-footer

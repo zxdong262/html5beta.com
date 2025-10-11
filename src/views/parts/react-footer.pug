@@ -1,7 +1,8 @@
 
-script(crossorigin, src='https://cdn.jsdelivr.net/npm/react@18.0.0/umd/react.production.min.js')
-script(crossorigin, src='https://cdn.jsdelivr.net/npm/react-dom@18.0.0/umd/react-dom.production.min.js')
-script(crossorigin, src='https://cdn.jsdelivr.net/npm/canvas-shapes-bg/dist/canvas-shapes-bg.min.js')
+//- script(crossorigin, src='https://cdn.jsdelivr.net/npm/react@18.0.0/umd/react.production.min.js')
+//- script(crossorigin, src='https://cdn.jsdelivr.net/npm/react-dom@18.0.0/umd/react-dom.production.min.js')
+script(crossorigin, src='//cdn.jsdelivr.net/npm/canvas-shapes-bg/dist/canvas-shapes-bg.min.js')
+script(defer, src='https://static.addtoany.com/menu/page.js')
 //- script.
 //-   console.log(URL)
 //-   Object.defineProperty( window, 'URL', {
@@ -13,23 +14,15 @@ script(crossorigin, src='https://cdn.jsdelivr.net/npm/canvas-shapes-bg/dist/canv
 //-   enumerable: true, // Can be enumerated
 //-   configurable: false, // Can't be deleted or reconfigured
 //- });
-
-
 - if (dev)
   script(type='module').
-    import RefreshRuntime from '/@react-refresh'
-    RefreshRuntime.injectIntoGlobalHook(window)
-    window.$RefreshReg$ = () => {}
-    window.$RefreshSig$ = () => (type) => type
-    window.__vite_plugin_react_preamble_installed__ = true
   script(src='/@vite/client', type='module')
   script(src=jsUrl, type='module')
-- else
-  script(src=jsUrl, type='module')
-script(crossorigin, async, src='https://www.googletagmanager.com/gtag/js?id=G-0FRVEJZ2Z2')
-script.
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+- if (!dev)
+  script(crossorigin, async, src='https://www.googletagmanager.com/gtag/js?id=G-0FRVEJZ2Z2')
+  script.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-0FRVEJZ2Z2');
+    gtag('config', 'G-0FRVEJZ2Z2');

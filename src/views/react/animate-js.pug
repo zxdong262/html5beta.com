@@ -1,0 +1,59 @@
+script.
+  (function() {
+    let on = true
+    let shape = window.initShape || 'bubble'
+    const pool = ['star', 'bubble', 'heart', 'light', 'balloon']
+    const len = pool.length
+
+    function toggle() {
+      if (on) {
+        window.shapesInst.stop()
+      } else {
+        window.shapesInst.start()
+      }
+      on = !on
+      const btn = document.getElementById('toggle-btn')
+      if (btn) {
+        btn.textContent = on ? 'Stop animation' : 'Start animation'
+      }
+    }
+
+    function init() {
+      const options = {
+        shapeCount: 20,
+        timer: 100,
+        step: 3,
+        minSize: 50,
+        maxSize: 150,
+        shapesPool: [shape]
+      }
+      const shapesInst = new CanvasShapesBg(
+        document.getElementById('ca'),
+        options
+      )
+      shapesInst.start()
+      window.shapesInst = shapesInst
+    }
+
+    function change() {
+      const index = pool.findIndex(d => d === shape)
+      const next = (index + 1) % len
+      const nextShape = pool[next]
+      shape = nextShape
+      window.shapesInst.shapesPool = [nextShape]
+      window.shapesInst.stop()
+      window.shapesInst.start()
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      init()
+      const toggleBtn = document.getElementById('toggle-btn')
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', toggle)
+      }
+      const changeBtn = document.getElementById('change-btn')
+      if (changeBtn) {
+        changeBtn.addEventListener('click', change)
+      }
+    })
+  })()

@@ -1,0 +1,6 @@
+.mg3y.pd3y
+  div
+    a.mg3r(href=host) © ZHAO Xudong
+    each link in links
+      - const {text, ...attrs} = link
+      a(href=attrs.href, target=attrs.target, rel=attrs.rel, class=(attrs.className ? attrs.className + ' ' : '') + 'mg2r')= text

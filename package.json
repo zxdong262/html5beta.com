@@ -24,11 +24,7 @@
   "devDependencies": {
     "@types/node": "^20.3.1",
     "@vercel/node": "^2.15.8",
-    "@vitejs/plugin-react": "^4.0.4",
-    "antd-mobile": "^5.32.0",
-    "antd-mobile-icons": "^0.3.0",
     "axios": "^1.4.0",
-    "canvas-shapes-bg": "^1.1.1",
     "css-loader": "^6.8.1",
     "dayjs": "^1.11.13",
     "dotenv": "^16.3.1",
@@ -37,15 +33,11 @@
     "morgan": "^1.10.0",
     "nanoid": "^4.0.2",
     "pug": "^3.0.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "shelljs": "^0.8.5",
     "sitemaps": "^2.0.4",
     "standard": "^17.1.0",
     "stylus": "^0.64.0",
-    "universe-bg": "^1.0.0",
-    "vite": "^4.4.9",
-    "vite-plugin-purgecss": "^0.2.12"
+    "vite": "^4.4.9"
   },
   "repository": {
     "type": "git",
@@ -60,14 +52,11 @@
   "standard": {
     "ignore": [
       "/temp",
-      "/public"
+      "/public",
+      "/src/static"
     ],
-    "parser": "@babel/eslint-parser",
     "parserOptions": {
-      "sourceType": "module",
-      "plugins": [
-        "importAssertions"
-      ]
+      "sourceType": "module"
     }
   }
 }

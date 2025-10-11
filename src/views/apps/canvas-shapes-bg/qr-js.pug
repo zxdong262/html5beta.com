@@ -1,0 +1,128 @@
+script.
+  (function() {
+    let on = true
+    let shape = 'bubble'
+    let text = ''
+    const pool = ['star', 'bubble', 'heart', 'light', 'balloon']
+    const len = pool.length
+
+    function toggle() {
+      if (on) {
+        window.shapesInst.stop()
+      } else {
+        window.shapesInst.start()
+      }
+      on = !on
+      const btn = document.getElementById('toggle-btn')
+      if (btn) {
+        btn.textContent = on ? 'Stop animation' : 'Start animation'
+      }
+    }
+
+    function init() {
+      const options = {
+        shapeCount: 20,
+        timer: 100,
+        step: 3,
+        minSize: 50,
+        maxSize: 150,
+        shapesPool: [shape]
+      }
+      const shapesInst = new CanvasShapesBg(
+        document.getElementById('ca'),
+        options
+      )
+      shapesInst.start()
+      window.shapesInst = shapesInst
+    }
+
+    function change() {
+      const index = pool.findIndex(d => d === shape)
+      const next = (index + 1) % len
+      const nextShape = pool[next]
+      shape = nextShape
+      const { shapesInst } = window
+      shapesInst.shapesPool = [nextShape]
+      shapesInst.stop()
+      shapesInst.start()
+    }
+
+    function randomShapes() {
+      const { shapesInst } = window
+      shapesInst.shapesPool = pool
+      shapesInst.stop()
+      shapesInst.start()
+    }
+
+    function render() {
+      const { shapesInst } = window
+      shapesInst.stop()
+      const arr = shapesInst.buildPosArrayFromText(text)
+      shapesInst.moveTo(arr)
+
+      shapesInst.stop()
+      clearTimeout(shapesInst.timerHandle0)
+
+      const tarArr = shapesInst.buildPosArrayFromText(text, {
+        fontSize: 100,
+        top: 300
+      })
+      shapesInst.shapeCount = tarArr.length
+      shapesInst.minSize = 5
+      shapesInst.maxSize = 5
+      shapesInst.shapes = []
+      shapesInst.start()
+
+      setTimeout(startText, 1000)
+
+      function startText() {
+        clearTimeout(shapesInst.timerHandle)
+        loop()
+        function loop() {
+          shapesInst.moveTo(tarArr)
+          shapesInst.renderShapes()
+          shapesInst.timerHandle0 = setTimeout(function() {
+            if (shapesInst.arriveTarget) {
+              return clearTimeout(shapesInst.timerHandle0)
+            }
+            loop()
+          }, shapesInst.timer)
+        }
+      }
+    }
+
+    function updateButtonState() {
+      const btn = document.getElementById('render-btn')
+      if (btn) {
+        btn.disabled = !text.trim()
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      init()
+      const toggleBtn = document.getElementById('toggle-btn')
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', toggle)
+      }
+      const changeBtn = document.getElementById('change-btn')
+      if (changeBtn) {
+        changeBtn.addEventListener('click', change)
+      }
+      const randomBtn = document.getElementById('random-btn')
+      if (randomBtn) {
+        randomBtn.addEventListener('click', randomShapes)
+      }
+      const textInput = document.getElementById('text-input')
+      if (textInput) {
+        textInput.addEventListener('input', (e) => {
+          text = e.target.value
+          updateButtonState()
+        })
+      }
+      const renderBtn = document.getElementById('render-btn')
+      if (renderBtn) {
+        renderBtn.addEventListener('click', render)
+        updateButtonState()
+      }
+    })
+  })()

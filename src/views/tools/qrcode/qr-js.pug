@@ -1,0 +1,51 @@
+script.
+  (function() {
+    let text = ''
+    let size = 200
+    let qrCodeUrl = ''
+    const textInput = document.getElementById('text-input')
+    const sizeInput = document.getElementById('size-input')
+    const generateBtn = document.getElementById('generate-btn')
+    const downloadBtn = document.getElementById('download-btn')
+    const canvas = document.getElementById('qrcode')
+    const toast = document.getElementById('toast')
+
+    function showToast(message) {
+      toast.textContent = message
+      toast.classList.remove('hide')
+      setTimeout(() => {
+        toast.classList.add('hide')
+      }, 3000)
+    }
+
+    textInput.addEventListener('input', (e) => {
+      text = e.target.value
+      generateBtn.disabled = !text
+    })
+
+    sizeInput.addEventListener('input', (e) => {
+      size = parseInt(e.target.value) || 200
+    })
+
+    generateBtn.addEventListener('click', () => {
+      const { QRious } = window
+      const qr = new QRious({
+        element: canvas,
+        value: text,
+        size
+      })
+      qrCodeUrl = qr.toDataURL()
+      downloadBtn.classList.remove('hide')
+    })
+
+    downloadBtn.addEventListener('click', () => {
+      if (!qrCodeUrl) {
+        showToast('Please generate a QR code first.')
+        return
+      }
+      const downloadLink = document.createElement('a')
+      downloadLink.href = qrCodeUrl
+      downloadLink.download = 'qrcode.png'
+      downloadLink.click()
+    })
+  })()

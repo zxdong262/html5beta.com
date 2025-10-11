@@ -9,6 +9,9 @@ html
   body
     #main
       #container.main
+        include qr.pug
+
     include ../../parts/react-common
     script(crossorigin, src='https://cdn.jsdelivr.net/npm/qrious/dist/qrious.min.js')
+    include ./qr-js.pug
     include ../../parts/react-footer

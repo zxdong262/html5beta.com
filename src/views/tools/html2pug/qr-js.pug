@@ -1,0 +1,56 @@
+script.
+  (function() {
+    let text = ''
+    let pug = ''
+    let loading = false
+    const htmlInput = document.getElementById('html-input')
+    const convertBtn = document.getElementById('convert-btn')
+    const copyBtn = document.getElementById('copy-btn')
+    const pugTextarea = document.getElementById('pug')
+    const toast = document.getElementById('toast')
+
+    function showToast(message) {
+      toast.textContent = message
+      toast.classList.remove('hide')
+      setTimeout(() => {
+        toast.classList.add('hide')
+      }, 3000)
+    }
+
+    htmlInput.addEventListener('input', (e) => {
+      text = e.target.value
+      convertBtn.disabled = !text || loading
+    })
+
+    convertBtn.addEventListener('click', async () => {
+      loading = true
+      convertBtn.disabled = true
+      convertBtn.textContent = 'Converting...'
+      try {
+        const url = '/api/html2pug'
+        const response = await fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ html: text })
+        })
+        const data = await response.json()
+        pug = data.pug
+        pugTextarea.value = pug
+        copyBtn.classList.remove('hide')
+      } catch (err) {
+        showToast(err.message)
+      } finally {
+        loading = false
+        convertBtn.disabled = !text
+        convertBtn.textContent = 'Convert to pug'
+      }
+    })
+
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(pug).then(() => {
+        showToast('Copied to clipboard')
+      })
+    })
+  })()

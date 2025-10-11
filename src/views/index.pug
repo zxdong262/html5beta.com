@@ -2,45 +2,49 @@ doctype html
 html
   head
     title #{siteName}
-    meta(name='description', content='html5beta.com')
-    meta(name='keywords', content='html5beta.com')
+    meta(name='description', content=description)
+    meta(name='keywords', content=keywords)
     include ./parts/react-header
   body
-    #main
+    #main.pd2
       #content
         h1 html5beta.com
-        .container
-          .column
-            h2 Apps
-            ul
-              each val, i in apps
-                li
-                  h3
-                    a(href=val.url || val.homepage) #{val.title || val.name}
-                  p.color-grey #{val.desc || val.description}
-          .column
-            h2 Tools
-            ul
-              each val, i in tools
-                li
-                  h3
-                    a(href=val.url) #{val.title}
-                  p.color-grey #{val.desc}
-          .column
-            h2 Links
-            .post
-              ul
-                each val, i in list
-                  li
-                    h3
-                      a(href=val.homepage || val.url) #{val.title || val.name}
-                    p.color-grey #{val.desc || val.description}
+        p.color-grey A place to record my learning web development, tools, and other things.
+
+        h2 My Apps
+        ul
+          each val, i in apps
+            li
+              h3
+                a(href=val.url || val.homepage) #{val.title || val.name}
+              p.color-grey #{val.desc || val.description}
+
+        h2 My Tools
+        ul
+          each val, i in tools
+            li
+              h3
+                a(href=val.url) #{val.title}
+              p.color-grey #{val.desc}
+
+        h2 Links
+        .post
+          ul
+            each val, i in list
+              li
+                h3
+                  a(href=val.homepage || val.url) #{val.title || val.name}
 
         #container
+          include ./react/footer
+          include ./react/animate
+
     script.
       const arr =  ['star', 'bubble', 'heart', 'light', 'balloon'];
       const len = arr.length;
       const random = Math.floor(Math.random() * len);
       window.initShape = arr[random];
     include ./parts/react-common
+    include ./react/animate-js
     include ./parts/react-footer
+    include ./react/header

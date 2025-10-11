@@ -22,8 +22,8 @@ export const buildPug = async (sourceDir, targetDir) => {
       ...data,
       pretty: false,
       url,
-      cssUrl: url + name + '.bundle.css',
-      jsUrl: url + name + '.bundle.js'
+      cssUrl: '/index.bundle.css',
+      jsUrl: '/index.bundle.js'
     })
     await fs.writeFile(targetFilePath, htmlContent, 'utf8')
   }

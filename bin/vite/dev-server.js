@@ -19,7 +19,7 @@ async function handler (req, res) {
 
   const view = `${folder}/${file}/index`
   // const fv = resolve(cwd, `src/views/${folder}/${file}/index.jsx`)
-  const fv = `/src/views/${folder}/${file}/index.jsx`
+  const fv = '/src/views/index.jsx'
   console.log('fv', fv)
   // const x = await global.viteInst.transformRequest(fv)
   // console.log(x, 'url', x.url)
@@ -29,7 +29,7 @@ async function handler (req, res) {
     host: h,
     url: h + `/${folder}/${file}/`,
     jsUrl: fv,
-    cssUrl: h + `/${folder}/${file}/${file}.bundle.css`
+    cssUrl: h + '/index.css'
   })
 }
 
@@ -46,6 +46,7 @@ async function handleApi (req, res, next) {
 }
 
 function handlerJs (req, res) {
+  console.log('req js', req.params)
   const {
     jsName
   } = req.params
@@ -66,6 +67,7 @@ function handleIndex (req, res) {
 }
 
 function handlePage (req, res) {
+  console.log('handle page', req.params)
   const {
     name
   } = req.params

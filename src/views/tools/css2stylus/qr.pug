@@ -1,0 +1,16 @@
+.pd2
+  include ../../react/header.pug
+
+  h1 Css to Stylus
+  .pd1y
+    .pd1y Css:
+    textarea#css-input(placeholder='Enter css', rows='10')
+  .pd1y
+    button#convert-btn.mg1r.mg1b(color='primary', disabled) Convert to stylus
+  .pd1y
+    .pd1y.fix
+      b.fleft Stylus:
+      button#copy-btn.fright.hide(color='default', size='small') Copy To Clipboard
+    textarea#stylus.w100(placeholder='', rows='10')
+  .toast.hide#toast
+  include ../../react/footer.pug
