@@ -39,6 +39,14 @@ const links = [
   {
     url: 'https://electerm-cloud.html5beta.com/',
     title: 'electerm cloud'
+  },
+  {
+    title: 'News',
+    url: 'https://news.html5beta.com'
+  },
+  {
+    title: 'Games for kids',
+    url: 'https://g.html5beta.com'
   }
 ]
 export default {
