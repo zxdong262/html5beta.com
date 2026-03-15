@@ -41,8 +41,12 @@ const links = [
     title: 'electerm cloud'
   },
   {
-    title: 'News',
-    url: 'https://news.html5beta.com'
+    title: 'China VS rest of the world',
+    url: 'https://china-vs-rest-of-the-world.html5beta.com'
+  },
+  {
+    title: 'China VS India',
+    url: 'https://china-vs-india.html5beta.com'
   },
   {
     title: 'Games for kids',
