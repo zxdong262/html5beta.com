@@ -49,6 +49,10 @@ const links = [
     url: 'https://china-vs-india.html5beta.com'
   },
   {
+    title: 'China VS United States',
+    url: 'https://china-vs-us.html5beta.com'
+  },
+  {
     title: 'Games for kids',
     url: 'https://g.html5beta.com'
   }
