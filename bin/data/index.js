@@ -33,7 +33,7 @@ const links = [
     title: 'Electerm Debian Repository'
   },
   {
-    url: 'https://electerm.html5beta.com/sponsor-electerm.html',
+    url: 'https://electerm.org/sponsor-electerm.html',
     title: 'Sponsor Electerm'
   },
   {
