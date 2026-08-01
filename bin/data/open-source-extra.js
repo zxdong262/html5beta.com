@@ -4,7 +4,7 @@ export default [
     name: 'electerm',
     homepage: 'https://electerm.org',
     description: '📻Terminal/ssh/sftp client(linux, mac, win)',
-    stargazers_count: 12851,
+    stargazers_count: 14630,
     language: 'JavaScript',
     repository: {
       type: 'git',
