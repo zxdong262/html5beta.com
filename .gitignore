@@ -37,4 +37,5 @@ coverage
 /public/
 .vscode
 /src/**/*.mjs
-.workbuddy/memory
+.workbuddy
+.workbuddy-ai
