@@ -1,0 +1,44 @@
+doctype html
+- var robots = 'noindex, follow'
+html(lang='en')
+  head
+    title 404 not found - #{siteName}
+    meta(name='description', content='The page you are looking for does not exist.')
+    include ./parts/react-header
+    style.
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+        color: #222;
+        background: #fff;
+      }
+      .nf {
+        text-align: center;
+        padding: 24px;
+      }
+      .nf h1 {
+        font-size: 64px;
+        margin: 0 0 8px;
+        font-weight: 600;
+        letter-spacing: 2px;
+      }
+      .nf p {
+        margin: 0 0 24px;
+        color: #666;
+      }
+      .nf a {
+        color: #06c;
+        text-decoration: none;
+      }
+      .nf a:hover {
+        text-decoration: underline;
+      }
+  body
+    .nf
+      h1 404
+      p the page you are looking for does not exist
+      a(href='/') back to #{siteName}

@@ -1,0 +1,23 @@
+{
+  "name": "html5beta-com",
+  "main": "src/worker/index.js",
+  "compatibility_date": "2026-10-14",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash"
+  },
+  "routes": [
+    { "pattern": "html5beta.com/*", "zone_name": "html5beta.com" },
+    { "pattern": "c.html5beta.com/*", "zone_name": "html5beta.com" }
+  ],
+  "rules": [
+    {
+      "type": "Text",
+      "globs": ["**/*.html"],
+      "fallthrough": true
+    }
+  ]
+}

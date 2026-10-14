@@ -42,9 +42,25 @@ async function buildPages () {
   }
 }
 
+async function build404 () {
+  const src = path.resolve(new URL('../src/views/404.pug', import.meta.url).pathname)
+  const tar = path.resolve(new URL('../src/static/404.html', import.meta.url).pathname)
+  const pugContent = await fs.readFile(src, 'utf8')
+  const htmlContent = pug.render(pugContent, {
+    filename: src,
+    ...data,
+    pretty: false,
+    url: data.host,
+    cssUrl: '/index.bundle.css',
+    jsUrl: '/index.bundle.js'
+  })
+  await fs.writeFile(tar, htmlContent, 'utf8')
+}
+
 async function run () {
   await buildPages()
   await buildIndex()
+  await build404()
 }
 
 run()
